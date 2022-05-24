@@ -1,0 +1,71 @@
+{
+    "journals": [
+        {
+            "_id": "journal01",
+            "title": "React Study",
+            "description" : "This is the first journal Data model!",
+            "author": {
+                "_id" : "user01"
+            },
+            "entries" : [
+                {
+                    "_id" : "entry01",
+                    "date" : "05/24/22",
+                    "body" : "Today is 05/24/22. I'm creating a journal app using the MERN stack. Right now I'm testing out the json-server to create some sample data to use during development." ,
+                    "reactions": [
+                        {
+                            "thumbsUp": 2,
+                            "heart" : 1,
+                            "smile" : 3
+                        }
+                    ],
+                    "comments" : [
+                        {
+                            "_id" : "comment01",
+                            "author" : "user007",
+                            "date" : "05/24/22",
+                            "body": "So great! I'm proud of you!",
+                            "reactions": [
+                                {
+                                    "thumbsUp": 1,
+                                    "heart" : 8,
+                                    "smile" : 0
+                                }
+                            ]
+                        }
+                    ]
+
+                },
+                {
+                    "_id" : "entry02",
+                    "date" : "05/23/22",
+                    "body" : "making bacon appcakes, take the bacon and a put it in the appcake.", 
+                    "reactions": [
+                        {
+                            "thumbsUp": 10,
+                            "heart" : 2,
+                            "smile" : 2
+                        }
+                    ],
+                    "comments" : [
+                        {
+                            "_id" : "comment02",
+                            "author" : "user392",
+                            "date" : "05/23/22",
+                            "body": "Noice",
+                            "reactions": [
+                                {
+                                    "thumbsUp": 12,
+                                    "heart" : 8000,
+                                    "smile" : 0
+                                }
+                            ]
+                        }
+                    ]
+                    
+                    }
+            ]
+
+        }
+    ]
+}

@@ -1,9 +1,8 @@
-function Home (){
+export default function Home (){
 
     const onClick= (e) => {
         console.log(e)
     }
-
 
     return <div>
         <header>
@@ -12,4 +11,3 @@ function Home (){
     </div>
 }
 
-export default Home;
