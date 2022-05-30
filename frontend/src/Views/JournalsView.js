@@ -16,13 +16,13 @@ export default function JournalsView(props){
                 
         <div>
             {/* button will take you to Create Journal Form */}
-            <NewJournalForm />
             <button>Create New Journal</button>  
+            <NewJournalForm />
 
         </div>
         
         <div>
-            <p>Your Journals:</p>
+            <h3>Your Journals:</h3>
             <ol>
                 {journalSnapShots}
             </ol>

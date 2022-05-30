@@ -10,9 +10,9 @@ export default function Journal(props){
 
     return <div>
         <Header header={`- Journal: '${journal.title}'`} />
-        <p>{props.journal.title}:</p>
+        <h3>{props.journal.title}</h3>
 
-        <p>The latest entries:</p>
+        <p>Recent entries:</p>
         <ul>
             {journalEntries}
         </ul>
