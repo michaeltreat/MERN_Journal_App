@@ -1,9 +1,8 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
-import "./ComponentStyles/SignInForm.css"
+import "../ComponentStyles/FormStyles/SignInForm.css"
 
 const schema = yup.object({
     username: yup.string().required("Username is required."),
@@ -35,7 +34,7 @@ export default function SignInForm(props){
                 {...register("password")}
                 />
 
-            {/* errors are rendered in p tags. I want to extract this into an error component */}
+            
             <p>{errors.password?.message}</p>
 
             <input 
@@ -43,7 +42,7 @@ export default function SignInForm(props){
                 {...register("email")}
                 />
 
-            {/* errors are rendered in p tags. I want to extract this into an error component */}
+            
             <p>{errors.email?.message}</p>
             
             <input type="submit" value="Login"  />

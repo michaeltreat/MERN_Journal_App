@@ -1,5 +1,7 @@
 import JournalSnapShot from "../Components/JournalSnapShot";
 import Header from "../Components/Header";
+import NewJournalForm from "../Components/Forms/NewJournalForm";
+
 
 export default function JournalsView(props){
 
@@ -10,10 +12,13 @@ export default function JournalsView(props){
     return <div>
 
         <Header header="- Journals" />
+
                 
         <div>
             {/* button will take you to Create Journal Form */}
+            <NewJournalForm />
             <button>Create New Journal</button>  
+
         </div>
         
         <div>

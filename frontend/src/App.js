@@ -2,6 +2,8 @@ import HomeView from './Views/HomeView'
 import LandingView from './Views/LandingView';
 import JournalsView from './Views/JournalsView';
 import Journal from './Components/Journal';
+import NewJournalForm from './Components/Forms/NewJournalForm';
+
 
 import './App.css'
 
@@ -205,7 +207,7 @@ const dummyJournals =  [
 export default function App() {
   return <div>
     <HomeView />
-    <LandingView />
+    <LandingView />  
     <JournalsView journals={dummyJournals}/>
     <Journal journal={dummyJournals[0]} />
     <Journal journal={dummyJournals[1]} />
