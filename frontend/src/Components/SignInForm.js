@@ -7,7 +7,7 @@ import "./ComponentStyles/SignInForm.css"
 
 const schema = yup.object({
     username: yup.string().required("Username is required."),
-    password: yup.string().required("Password is required.").matches(/^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$/, "Must include an uppercase, lowercase, and number."),
+    password: yup.string().required("Password is required.").matches(/^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$/, "Must be 6 characters long, include both an uppercase and lowercase letter, and number."),
     email: yup.string().required("Email is required.").matches(/.+\@.+\..+/, "Must be a valid email format.")
 }).required();
 
