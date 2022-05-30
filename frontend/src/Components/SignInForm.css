@@ -1,0 +1,12 @@
+.primary {
+    border: 1px solid #000;
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+}
+
+.primary > label{
+    
+    display: block;
+    margin-bottom: 10px;
+}
