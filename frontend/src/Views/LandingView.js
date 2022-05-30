@@ -4,7 +4,7 @@ import SignInForm from "../Components/SignInForm";
 export default function LandingView (props){
     
     return <div>
-        <Header header="Journally App - Login/Signup!"/>
+        <Header header="- Login/Signup!"/>
         <SignInForm />
     </div>
 }

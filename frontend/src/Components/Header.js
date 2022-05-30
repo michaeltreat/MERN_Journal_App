@@ -1,6 +1,6 @@
 export default function Header(props){
     return <header>
-        <h1>{props.header}</h1>
+        <h1>Journally App {props.header}</h1>
     </header>
 
 }

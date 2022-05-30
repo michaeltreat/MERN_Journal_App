@@ -1,26 +1,20 @@
+import Header from "./Header"
 import JournalEntry from "./JournalEntry"
 
 export default function Journal(props){
-    
-    // const journalEntries = props.journalEntries.map(entry =>{
-    //     return <JournalEntry key={entry._id} description={entry.description} body={entry.body} />
-    // })
+    const journal = props.journal    
 
-    return <li>
+    const journalEntries = props.journal.entries.map(entry =>{
+        return <JournalEntry key={entry._id} description={entry.description} body={entry.body} />
+    })
 
-
-        {/* Display the Journal SnapShot here instead of it's list of journal entries. */}
-       
-       
-        {/* <p> {props.journal.title}:</p>
+    return <div>
+        <Header header={`- Journal: '${journal.title}'`} />
+        <p>{props.journal.title}:</p>
 
         <p>The latest entries:</p>
         <ul>
             {journalEntries}
-        </ul> */}
-
-    </li>
-    
-
-
+        </ul>
+    </div>
 }

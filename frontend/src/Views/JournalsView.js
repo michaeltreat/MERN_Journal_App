@@ -9,7 +9,7 @@ export default function JournalsView(props){
 
     return <div>
 
-        <Header header="Journally App - Journals" />
+        <Header header="- Journals" />
                 
         <div>
             {/* button will take you to Create Journal Form */}
