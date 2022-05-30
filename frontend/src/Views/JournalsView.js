@@ -10,8 +10,6 @@ export default function JournalsView(props){
         return <JournalSnapShot key={journal._id} journal={journal} />
     })
 
-
-
     return <div>
 
         <Header header="- Journals" />

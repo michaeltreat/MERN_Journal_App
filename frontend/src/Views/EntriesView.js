@@ -9,7 +9,7 @@ export default function EntriesView(props){
 
     // TODO: Currently this is rendering all of the entries in full content. Instead, I want to render just the snapshots of all the entires. Then, if a user clicks on an individual entry, it will render just that entry's full content it it's own view. 
     const journalEntires = entries.map(entry =>{
-        return <JournalEntry entry={entry} title={props.title} />
+        return <JournalEntry key={entry._id} entry={entry} title={props.title} />
     })
 
     return <div>
