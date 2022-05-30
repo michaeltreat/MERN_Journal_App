@@ -1,8 +1,6 @@
-import Header from './Components/Header';
-import Home from './Components/Home'
+import HomeView from './Views/HomeView'
 import SignInForm from './Components/SignInForm';
-import Journals from './Components/Journals';
-import Journal from './Components/Journal';
+import JournalsView from './Views/JournalsView';
 
 
 import './App.css'
@@ -104,17 +102,110 @@ const dummyJournals =  [
               
           }
       ]
-  }
+  },
+  {
+    "_id": "journal-02",
+        "visibility" : {
+            "public" : false,
+            "shared" : true
+        },
+        "title": "Weight loss log",
+        "description" : "Keeping a log of my weight loss journey!",
+        "author": {
+            "_id" : "0"
+        },
+        "entries" : [
+            {
+                "_id" : "entry01",
+                "date" : "05/24/22",
+                "description" : "sample from journal 2 entry 1",
+                "body" : "Today I ate a banana then ordered from door dash. I persisted in an unrelenting shame-state for the remainder of the evening. " ,
+                "reactions": [
+                    {
+                        "thumbsUp": {
+                            "users": ["users"]
+                        },
+                        "heart" : {
+                            "users": ["users"]
+                        },
+                        "smile" : {
+                            "users": ["users"]
+                        }
+                    }
+                ],
+                "comments" : [
+                    {
+                        "_id" : "comment01",
+                        "author" : "1",
+                        "date" : "05/24/22",
+                        "body": "So great! I'm proud of you!",
+                        "reactions": [
+                            {
+                                "thumbsUp": {
+                                    "users": ["users"]
+                                },
+                                "heart" : {
+                                    "users": ["users"]
+                                },
+                                "smile" : {
+                                    "users": ["users"]
+                                }
+                            }
+                        ]
+                    }
+                ]
+
+            },
+            {
+                "_id" : "entry02",
+                "date" : "05/23/22",
+                "description" : "sample from journal 2 entry 2",
+                "body" : "Yeah baby, back to making - making bacon appcakes", 
+                "reactions": [
+                    {
+                        "thumbsUp": {
+                            "users": ["users"]
+                        },
+                        "heart" : {
+                            "users": ["users"]
+                        },
+                        "smile" : {
+                            "users": ["users"]
+                        }
+                    }
+                ],
+                "comments" : [
+                    {
+                        "_id" : "comment02",
+                        "author" : "user392",
+                        "date" : "05/23/22",
+                        "body": "Noice",
+                        "reactions": [
+                            {
+                                "thumbsUp": {
+                                    "users": ["users"]
+                                },
+                                "heart" : {
+                                    "users": ["users"]
+                                },
+                                "smile" : {
+                                    "users": ["users"]
+                                }
+                            }
+                        ]
+                    }
+                ]
+                
+            }
+        ]
+  
+    }
 ] 
 
-
 export default function App() {
-  return <main>
-    <Header />
-    <SignInForm />
-    <Home />
-    <Journals journals={dummyJournals}/>
-  </main>
-
-;
+  return <div>
+    {/* <HomeView /> */}
+    {/* <SignInForm /> */}
+    <JournalsView journals={dummyJournals}/>
+  </div>
 }

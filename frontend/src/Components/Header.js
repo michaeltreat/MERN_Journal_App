@@ -1,7 +1,6 @@
-export default function Header(){
-
+export default function Header(props){
     return <header>
-        <h1>Journally App</h1>
+        <h1>{props.header}</h1>
     </header>
 
 }

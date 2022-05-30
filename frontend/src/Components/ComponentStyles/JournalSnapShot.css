@@ -1,0 +1,19 @@
+.journalSnapShot > * {background-color: white;}
+
+.journalSnapShot {
+    background-color: white;
+    width: 30em;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.journalSnapShot > p {
+    text-decoration: underline dashed pink;
+    text-underline-offset: .25em;
+    background-color: white;
+    font-size: large;
+    margin-bottom: 1.5em;
+    margin-left: 1em;
+    text-indent: 1em;
+
+}

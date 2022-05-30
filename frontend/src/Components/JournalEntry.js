@@ -1,4 +1,4 @@
-import './JournalEntry.css'
+import './ComponentStyles/JournalEntry.css'
 
 export default function JournalEntry(props){
     
