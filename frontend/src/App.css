@@ -1,4 +1,4 @@
-@import url('https://unpkg.com/purecss@1.0.1/build/base-min.css');
+/* @import url('https://unpkg.com/purecss@1.0.1/build/base-min.css'); */
 @import url('https://fonts.googleapis.com/css?family=Dosis');
 
 
@@ -7,15 +7,15 @@
     background-color: antiquewhite;
 }
 
-header {
+/* header {
     border-bottom: 4px solid gray;
     margin-bottom: 5%
-}
+} */
 
-body{
+/* body{
     margin-left: 6%;
     margin-right: 6%;
-}
+} */
 
 input{
     background-color: white;

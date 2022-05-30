@@ -12,28 +12,34 @@ const schema = yup.object({
 
 export default function SignInForm(){
     const {register, handleSubmit, watch, formState: {errors} } = useForm({
-        resolver: yupResolver(schema)
+        resolver: yupResolver(schema),
+        shouldFocusError: true
     });
 
     const onSubmit = data => {
         console.log("hello");
     }
-    return <div>
+    return <div >
 
         <form className="primary" onSubmit={handleSubmit(onSubmit)}>
-            <label>Sign-in:</label>
-            <label htmlFor="Username">Username: </label>
-            <input placeholder="Username" 
+            <p>Sign-in:</p>
+
+            <input 
+                placeholder="Username"
+                autoFocus
                 {...register("username")}
                 />
             <p>{errors.username?.message}</p>
-            <label htmlFor="Password">Password: </label>
+            
             <input 
                 placeholder="Password"
                 {...register("password")}
                 />
+
+            {/* errors are rendered in p tags. I want to extract this into an error component */}
             <p>{errors.password?.message}</p>
-            <input type="submit" />
+            
+            <input type="submit" value="Login"  />
         </form>
     </div>
 }
