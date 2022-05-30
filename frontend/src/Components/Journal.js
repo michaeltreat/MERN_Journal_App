@@ -10,6 +10,5 @@ export default function Journal(props){
 
         <EntriesView entries={journal.entries} title={journal.title} recentEntryDisplayLimit={props.recentEntryDisplayLimit}
 />
-
     </div>
 }

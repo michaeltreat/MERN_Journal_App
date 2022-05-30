@@ -5,7 +5,8 @@ import JournalEntry from "../Components/JournalEntry";
 
 export default function EntriesView(props){
     const entries = props.entries
-    const recentEntryDisplayLimit = props.recentEntryDisplayLimit | 4
+    console.log(props.recentEntryDisplayLimit)
+    const recentEntryDisplayLimit = props.recentEntryDisplayLimit || 4
 
     const journalEntrySnapShots = entries.map( (entry, i) =>{
         if ( i >= recentEntryDisplayLimit) return;
@@ -24,7 +25,7 @@ export default function EntriesView(props){
         </div>
 
         {/* Rendering snapshots of just the 4 most recent entries */}
-        <p>Most recent snapshots from "{props.title}":</p>
+        <p>Showing the {recentEntryDisplayLimit} most recent snapshots from "{props.title}":</p>
         <ul>
             {journalEntrySnapShots}
         </ul>

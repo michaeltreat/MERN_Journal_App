@@ -32,7 +32,11 @@ export default function JournalsView(props){
 
         {/* Full Journal View */}
         <div>
-            <Journal journal={props.journals[0]} recentEntryDisplayLimit={0} />
+            {/* <Journal journal={props.journals[0]} recentEntryDisplayLimit={0} /> */}
+            <Journal journal={props.journals[0]} recentEntryDisplayLimit={1} />
+            
+            <Journal journal={props.journals[1]} recentEntryDisplayLimit={0} />
+            
         </div>
 
     </div>
