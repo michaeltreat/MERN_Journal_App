@@ -5,17 +5,9 @@
 *{
     font-family: 'Dosis';
     background-color: antiquewhite;
+    border-radius: 5px;
 }
 
-/* header {
-    border-bottom: 4px solid gray;
-    margin-bottom: 5%
-} */
-
-/* body{
-    margin-left: 6%;
-    margin-right: 6%;
-} */
 
 input{
     background-color: white;

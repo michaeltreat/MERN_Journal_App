@@ -1,0 +1,47 @@
+.journalForm > *{
+    background-color: white;
+}
+
+.journalForm {
+    text-align: center;
+    background-color: white;
+    margin-top: 5%;
+    border: 2px solid black;
+    padding: 15px;
+    width: 15em;
+    margin: auto;
+}
+
+/* input fields */
+.journalForm > input:not(:last-child){
+    outline: none;
+    border: none;
+    border-bottom: 2px dashed pink;
+    font-size: large;
+    margin-bottom: em;
+    width: 85%;
+    
+}
+
+/* Login Button */
+.journalForm > input:last-child{
+    width: 75%;
+    font-size: x-large;
+}
+
+.journalForm > p{
+    margin-top: 1px;
+    font-size: x-large;
+}
+
+/* form title */
+.journalForm > p:first-child {
+    border-bottom: 3px solid pink;
+    padding-bottom: 4px;
+}
+/* errors */
+.journalForm > p:not(:first-child){
+    display: block;
+    font-size: larger;
+    color: red;
+}
