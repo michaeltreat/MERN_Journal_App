@@ -1,11 +1,14 @@
 import Home from './Components/Home'
 import SignInForm from './Components/SignInForm';
+import Header from './Components/Header';
+
+import './App.css'
 
 
 export default function App() {
   return (
     <div >
-      <h1>Journally App</h1>
+      <Header />
       <Home />
       <SignInForm />
     </div>

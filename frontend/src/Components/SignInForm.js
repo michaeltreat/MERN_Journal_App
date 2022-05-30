@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
-import "./SignInForm.css"
+import "./ComponentStyles/SignInForm.css"
 
 const schema = yup.object({
     username: yup.string().required("Username is required."),
