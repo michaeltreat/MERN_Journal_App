@@ -1,0 +1,47 @@
+.primary > *{
+    background-color: white;
+}
+
+.primary {
+    text-align: center;
+    background-color: white;
+    margin-top: 5%;
+    border: 2px solid black;
+    padding: 15px;
+    width: 15em;
+    margin: auto;
+}
+
+/* input fields */
+.primary > input:not(:last-child){
+    outline: none;
+    border: none;
+    border-bottom: 2px dashed pink;
+    font-size: large;
+    margin-bottom: em;
+    width: 85%;
+    
+}
+
+/* Login Button */
+.primary > input:last-child{
+    width: 75%;
+    font-size: x-large;
+}
+
+.primary > p{
+    margin-top: 1px;
+    font-size: x-large;
+}
+
+/* form title */
+.primary > p:first-child {
+    border-bottom: 3px solid pink;
+    padding-bottom: 4px;
+}
+/* errors */
+.primary > p:not(:first-child){
+    display: block;
+    font-size: larger;
+    color: red;
+}

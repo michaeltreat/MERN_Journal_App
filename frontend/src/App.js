@@ -1,11 +1,16 @@
-import './App.css';
+import Header from './Components/Header';
+import Home from './Components/Home'
+import SignInForm from './Components/SignInForm';
 
-function App() {
+import './App.css'
+
+
+export default function App() {
   return (
-    <div className="App">
-      <h1>hello world</h1>
+    <div >
+      <Header />
+      {/* <Home /> */}
+      <SignInForm />
     </div>
   );
 }
-
-export default App;
