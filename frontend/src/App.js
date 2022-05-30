@@ -209,7 +209,6 @@ export default function App() {
     <HomeView />
     <LandingView />  
     <JournalsView journals={dummyJournals}/>
-    <Journal journal={dummyJournals[0]} />
-    <Journal journal={dummyJournals[1]} />
+
   </div>
 }

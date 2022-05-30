@@ -1,20 +1,18 @@
+import Header from './Header'
 import './ComponentStyles/JournalEntry.css'
 
 export default function JournalEntry(props){
+    const entry = props.entry
     
-    return <li>
-        <div className='journalEntry' >
-            
+    return <div className='journalEntry' >
             <label>Description:</label>
             <p>
-                {props.description}
+                {entry.description}
             </p>
 
             <label>Body:</label>
             <p>
-                {props.body}
+                {entry.body}
             </p>
         </div>
-    </li>
-
 }
