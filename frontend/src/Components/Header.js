@@ -1,5 +1,7 @@
 export default function Header(){
 
-    return <h1>Journally App</h1>
+    return <header>
+        <h1>Journally App</h1>
+    </header>
 
 }

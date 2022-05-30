@@ -21,6 +21,7 @@ export default function SignInForm(){
     return <div>
 
         <form className="primary" onSubmit={handleSubmit(onSubmit)}>
+            <label>Sign-in:</label>
             <label htmlFor="Username">Username: </label>
             <input placeholder="Username" 
                 {...register("username")}
