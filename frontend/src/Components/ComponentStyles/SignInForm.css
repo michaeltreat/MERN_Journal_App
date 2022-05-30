@@ -6,41 +6,27 @@
     text-align: center;
     background-color: white;
     margin-top: 5%;
-    border: 2px solid #000;
+    border: 2px solid black;
     padding: 15px;
     width: 15em;
     margin: auto;
 }
 
-.primary > label{
-    
-    font-size:larger;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.primary > input:last-child{
-    width: 75%;
-    font-size: x-large;
-}
-
+/* input fields */
 .primary > input:not(:last-child){
-    text-align: center;
     outline: none;
     border: none;
     border-bottom: 2px dashed pink;
     font-size: large;
-    padding: 3px;
-    padding-left: 5px;
     margin-bottom: em;
     width: 85%;
     
 }
 
-.primary > p:first-child {
-    text-align: center;
-    border-bottom: 3px solid pink;
-    padding-bottom: 4px;
+/* Login Button */
+.primary > input:last-child{
+    width: 75%;
+    font-size: x-large;
 }
 
 .primary > p{
@@ -48,6 +34,12 @@
     font-size: x-large;
 }
 
+/* form title */
+.primary > p:first-child {
+    border-bottom: 3px solid pink;
+    padding-bottom: 4px;
+}
+/* errors */
 .primary > p:not(:first-child){
     display: block;
     font-size: larger;

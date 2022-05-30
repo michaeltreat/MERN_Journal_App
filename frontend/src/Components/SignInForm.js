@@ -8,7 +8,8 @@ import "./ComponentStyles/SignInForm.css"
 const schema = yup.object({
     username: yup.string().required("Username is required."),
     password: yup.string().required("Password is required.").matches(/^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$/, "Must include an uppercase, lowercase, and number."),
-  }).required();
+    email: yup.string().required("Email is required.").matches(/.+\@.+\..+/, "Must be a valid email format.")
+}).required();
 
 export default function SignInForm(){
     const {register, handleSubmit, watch, formState: {errors} } = useForm({
@@ -38,6 +39,14 @@ export default function SignInForm(){
 
             {/* errors are rendered in p tags. I want to extract this into an error component */}
             <p>{errors.password?.message}</p>
+
+            <input 
+                placeholder="Email"
+                {...register("email")}
+                />
+
+            {/* errors are rendered in p tags. I want to extract this into an error component */}
+            <p>{errors.email?.message}</p>
             
             <input type="submit" value="Login"  />
         </form>
