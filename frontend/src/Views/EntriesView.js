@@ -5,7 +5,6 @@ import JournalEntry from "../Components/JournalEntry";
 
 export default function EntriesView(props){
     const entries = props.entries
-    console.log(props.recentEntryDisplayLimit)
     const recentEntryDisplayLimit = props.recentEntryDisplayLimit || 4
 
     const journalEntrySnapShots = entries.map( (entry, i) =>{
