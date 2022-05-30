@@ -13,8 +13,9 @@ export default function JournalEntrySnapShot(props){
 
             <label>Body:</label>
             <p>
-                {(entry.body.length) > 160 ? `"${entry.body.slice(0,160)} ..."`: `"${entry.body}"`}}
+                {(entry.body.length) > 120 ? `"${entry.body.slice(0,120)} ..."`: `"${entry.body}"`}
             </p>
+
         </div>
     </li>
 }

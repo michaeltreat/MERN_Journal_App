@@ -1,26 +1,37 @@
-import JournalSnapShot from "../Components/JournalSnapShot";
+import JournalEntrySnapShot from "../Components/JournalEntrySnapShots";
 import Header from "../Components/Header";
 import JournalEntry from "../Components/JournalEntry";
 
 
 export default function EntriesView(props){
     const entries = props.entries
-    
+    const recentEntryDisplayLimit = props.recentEntryDisplayLimit | 4
 
-    // TODO: Currently this is rendering all of the entries in full content. Instead, I want to render just the snapshots of all the entires. Then, if a user clicks on an individual entry, it will render just that entry's full content it it's own view. 
+    const journalEntrySnapShots = entries.map( (entry, i) =>{
+        if ( i >= recentEntryDisplayLimit) return;
+        return <JournalEntrySnapShot key={entry._id} entry={entry} />
+    })
+    
     const journalEntires = entries.map(entry =>{
         return <JournalEntry key={entry._id} entry={entry} title={props.title} />
     })
 
     return <div>
-        <Header header={`- Entries for "${props.title}":`} />
+
         {/*Create new Entry  */}
         <div>
             <button> New Entry</button>  
         </div>
+
+        {/* Rendering snapshots of just the 4 most recent entries */}
+        <p>Most recent snapshots from "{props.title}":</p>
+        <ul>
+            {journalEntrySnapShots}
+        </ul>
         
+        {/* Full entries */}
         <div>
-            <h3>Entries:</h3>
+            <h3>Full Entries for {props.title} </h3>
             <ol>
                 {journalEntires}
             </ol>
