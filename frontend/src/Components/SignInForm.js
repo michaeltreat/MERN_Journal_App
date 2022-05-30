@@ -11,7 +11,7 @@ const schema = yup.object({
     email: yup.string().required("Email is required.").matches(/.+\@.+\..+/, "Must be a valid email format.")
 }).required();
 
-export default function SignInForm(){
+export default function SignInForm(props){
     const {register, handleSubmit, watch, formState: {errors} } = useForm({
         resolver: yupResolver(schema),
         shouldFocusError: true

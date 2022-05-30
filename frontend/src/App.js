@@ -1,5 +1,5 @@
 import HomeView from './Views/HomeView'
-import SignInForm from './Components/SignInForm';
+import LandingView from './Views/LandingView';
 import JournalsView from './Views/JournalsView';
 
 
@@ -204,8 +204,8 @@ const dummyJournals =  [
 
 export default function App() {
   return <div>
-    {/* <HomeView /> */}
-    {/* <SignInForm /> */}
+    <HomeView />
+    <LandingView />
     <JournalsView journals={dummyJournals}/>
   </div>
 }
