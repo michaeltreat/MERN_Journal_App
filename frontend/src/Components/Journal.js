@@ -1,15 +1,14 @@
 import JournalEntry from "./JournalEntry"
 
-
 export default function Journal(props){
-    const description = "testing"
-    const body = "lorem ipsum or sumthing or other"
-
+    
+    const journalEntries = props.journalEntries.map(entry =>{
+        return <JournalEntry key={entry._id} description={entry.description} body={entry.body} />
+    })
 
     return <article>
             <ul>
-                <JournalEntry description={description} body={body}  />
-                <JournalEntry description={"simple"} body={"jack"} />
+                {journalEntries}
             </ul>
     </article>
 }

@@ -20,9 +20,7 @@ export default function SignInForm(){
     const onSubmit = data => {
         console.log("hello");
     }
-    return <div >
-
-        <form className="primary" onSubmit={handleSubmit(onSubmit)}>
+    return <form className="primary" onSubmit={handleSubmit(onSubmit)}>
             <p>Sign-in:</p>
 
             <input 
@@ -50,5 +48,4 @@ export default function SignInForm(){
             
             <input type="submit" value="Login"  />
         </form>
-    </div>
 }
