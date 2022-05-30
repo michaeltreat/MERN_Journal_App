@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/MERN_Journal_App/static/css/main.1e2b207b.css",
-    "main.js": "/MERN_Journal_App/static/js/main.3cfa8a4a.js",
+    "main.css": "/MERN_Journal_App/static/css/main.a49892cc.css",
+    "main.js": "/MERN_Journal_App/static/js/main.45be5810.js",
     "index.html": "/MERN_Journal_App/index.html",
-    "main.1e2b207b.css.map": "/MERN_Journal_App/static/css/main.1e2b207b.css.map",
-    "main.3cfa8a4a.js.map": "/MERN_Journal_App/static/js/main.3cfa8a4a.js.map"
+    "main.a49892cc.css.map": "/MERN_Journal_App/static/css/main.a49892cc.css.map",
+    "main.45be5810.js.map": "/MERN_Journal_App/static/js/main.45be5810.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e2b207b.css",
-    "static/js/main.3cfa8a4a.js"
+    "static/css/main.a49892cc.css",
+    "static/js/main.45be5810.js"
   ]
 }
