@@ -1,6 +1,9 @@
+import { Routes, Route, Link } from "react-router-dom";
+
 import HomeView from './Views/HomeView'
 import LandingView from './Views/LandingView';
 import JournalsView from './Views/JournalsView';
+import NavBar from "./Components/NavBar";
 import Journal from './Components/Journal';
 import NewJournalForm from './Components/Forms/NewJournalForm';
 
@@ -205,10 +208,15 @@ const dummyJournals =  [
 ] 
 
 export default function App() {
-  return <div>
-    <HomeView />
-    <LandingView />  
-    <JournalsView journals={dummyJournals}/>
+  return (
+    <div>
+        <NavBar />
+        <Routes>
+            <Route path="/" element={<LandingView />}/>
+            <Route path="home" element={<HomeView />}/>
+            <Route path="journals" element={<JournalsView journals={dummyJournals}/>}/>
+        </Routes>
 
   </div>
+  );
 }
