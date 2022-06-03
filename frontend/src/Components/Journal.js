@@ -12,9 +12,9 @@ export default function Journal(props){
 
     return <div>
 
-        <h3>{journal.title}</h3>
+        <Header title={`"${journal.title}"`} />
 
-        <EntriesView entries={journal.entries} title={journal.title} recentEntryDisplayLimit={props.recentEntryDisplayLimit} />
+        <EntriesView journal={journal} recentEntryDisplayLimit={props.recentEntryDisplayLimit} />
 
     </div>
 }

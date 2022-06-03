@@ -21,7 +21,7 @@ export default function JournalsView(props){
                 <Route path=":_id" element={<Journal /> } />
                 
                 {/* These routes need to be created still. */}
-                {/* <Route path=":id/entries" element={<Journal entries={props.entries} />} /> */}
+                <Route path=":_id/entries" element={<Journal />} />
                 {/* <Route path=":id/entries/new" element={<NewEntryForm journal={props.journal}/>} /> */}
                 {/* <Route path=":id/entries/:id" element={<JournalEntry journal={props.journal}/>} /> */}
             </Routes>
