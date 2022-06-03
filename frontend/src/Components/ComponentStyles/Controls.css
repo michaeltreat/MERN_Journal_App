@@ -1,0 +1,19 @@
+.controls{
+    text-align: center;
+    
+}
+.controls > div {
+    margin-left: 5%;
+    margin-right:5%;
+    display: inline-block;
+}
+
+div > a {
+    display: inline-block;
+    border: 1px solid black;
+    width:fit-content;
+    padding: .75%;
+    background-color: white;
+    text-decoration: none;
+    text-align: center;
+}

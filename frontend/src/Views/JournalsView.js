@@ -1,6 +1,5 @@
 import {Routes, Route, Link } from 'react-router-dom';
 
-import Header from '../Components/Header';
 import Journal from '../Components/Journal';
 import NewJournalForm from '../Components/Forms/NewJournalForm';
 import NewEntryForm from '../Components/Forms/NewEntryForm';
@@ -12,7 +11,6 @@ import Journals from "../Components/Journals";
 
 export default function JournalsView(props){
     const journals = props.journals
-    const user = "Miles"
 
     return (
 

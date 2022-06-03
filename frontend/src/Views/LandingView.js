@@ -4,7 +4,7 @@ import SignInForm from "../Components/Forms/SignInForm";
 export default function LandingView (props){
     
     return <div>
-        <Header header="- Login/Signup!"/>
+        <Header title="Login"/>
         <SignInForm />
     </div>
 }
