@@ -214,7 +214,7 @@ export default function App() {
         <NavBar />
         <Routes>
             <Route path="/" element={<LandingView />}/>
-            <Route path="home/*" element={<HomeView journals={dummyJournals} />}/>
+            <Route path="home/" element={<HomeView journals={dummyJournals} />}/>
             <Route path="journals/*" element={<JournalsView journals={dummyJournals}/>} />
         </Routes>
 

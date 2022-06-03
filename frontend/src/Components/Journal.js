@@ -5,7 +5,6 @@ export default function Journal(props){
     const journal = props.journal    
 
     return <div>
-        <Header header={`- Journal: '${journal.title}'`} />
         <h3>{props.journal.title}</h3>
 
         <EntriesView entries={journal.entries} title={journal.title} recentEntryDisplayLimit={props.recentEntryDisplayLimit}

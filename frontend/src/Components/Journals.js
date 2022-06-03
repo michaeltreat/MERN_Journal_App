@@ -1,6 +1,7 @@
 
-
+import {Routes, Route, Link } from 'react-router-dom';
 import Journal from "./Journal"
+import Header from './Header';
 
 export default function Journals (props){
     const journals = props.journals
@@ -16,10 +17,17 @@ export default function Journals (props){
 
     return (
         <div>
+        <Header header={`- Journals`} />
+
+        <Link to="/journals/new">Create New Journal</Link> 
+        <p></p>
+        <Link to="/journals/1">testing :id link for journal1</Link> 
+        <div>
             <ul>
                 {journalElements}
             </ul>
         </div>
+     </div>
     )
 
 

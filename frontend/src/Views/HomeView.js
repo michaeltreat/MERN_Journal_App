@@ -22,15 +22,14 @@ export default function JournalsView(props){
 
     return (
         <div>
-        
                 <div>
                     <Header header="- Home" />
                     <p>Welcome {user}!</p>
                 </div>
 
-            <Link to="new">Create New Journal</Link> 
-            <p></p>
             <Link to="/journals/">View All Journals</Link>  
+            <p></p>
+            <Link to="/journals/new">Create New Journal</Link> 
 
             <JournalSnapShotView journals={props.journals} />
             

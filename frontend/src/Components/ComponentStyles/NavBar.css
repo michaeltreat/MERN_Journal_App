@@ -1,0 +1,11 @@
+nav {
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+nav > a > p {
+    
+    margin-left: 5%;
+    margin-right: 5%;
+    display: inline-block;
+}
