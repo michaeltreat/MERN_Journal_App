@@ -1,21 +1,31 @@
 nav {
+    display: inline-block;
+    vertical-align: top;
     background-color: white;
     text-align: center;
     border-bottom: 2px dashed pink;
+    width: 100%;
+    padding-top: 0px;
+    padding-right:0px ;
+    margin-left: 0px;
+}
+
+nav > header {
+    display: inline-block;
+
 }
 
 nav > header > h1 {
+    display: inline-block;
     background-color: white;
-    margin-top: 0px;
-    margin-bottom: 0px;
     padding-top: 10px;
 }
 
 nav > a > p {
+    display: inline-block;
     background-color: white;
     border-bottom: 2px dashed pink;
     border-radius: 0;
     margin-left: 5%;
     margin-right: 5%;
-    display: inline-block;
 }

@@ -1,0 +1,24 @@
+
+
+.menuflyout {
+    display: inline-block;
+    background-color: white;
+    border: 2px dashed pink;
+    border-left: 0;
+    border-radius: 0;
+    width: 8vw;
+    height: 100vh;
+}
+
+.menuflyout > div{
+    background-color: white;
+}
+
+.menuflyout > div > *{
+    background-color: white;
+}
+
+.menuflyout > div > p{
+    margin-top: 0;
+
+}
