@@ -214,13 +214,8 @@ export default function App() {
         <NavBar />
         <Routes>
             <Route path="/" element={<LandingView />}/>
-            <Route path="home" element={<HomeView />}/>
-            <Route path="journals/*" element={<JournalsView journals={dummyJournals}/>}/>
-            <Route path="journals/new" element={<NewJournalForm />} />
-            <Route path="journals/:id" element={<Journal journal={props.journal}/> } />
-            <Route path="journals/:id/entries" element={<Journal entries={props.entries} />} />
-            <Route path="journals/:id/entries/new" element={<NewEntryForm journal={props.journal}/>} />
-            <Route path="journals/:id/entries/:id" element={<JournalEntry journal={props.journal}/>} />
+            <Route path="home/*" element={<HomeView journals={dummyJournals} />}/>
+            <Route path="journals/*" element={<JournalsView journals={dummyJournals}/>} />
         </Routes>
 
   </div>

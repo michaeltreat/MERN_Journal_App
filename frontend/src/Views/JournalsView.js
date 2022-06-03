@@ -1,34 +1,10 @@
-
-import React, { useState} from 'react';
-import {Routes, Route, Link } from 'react-router-dom';
-
-import Header from "../Components/Header";
-import Journals from '../Components/Journals';
-import JournalSnapShotView from './Sub-Views/JournalSnapShotView';
-import CreateJournalView from './Sub-Views/CreateJournalView';
-
-
-
-
+import Journals from "../Components/Journals";
 
 export default function JournalsView(props){
-    const [showJournals, setShowJournals] = useState(false)
+    const journals = props.journals
 
-    const user = 'Miles'
-    return <div>
-    
-        <Header header="- Journals" />
-        <p>Welcome {user}!</p>
 
-        <Link to="newjournal">Create New Journal</Link>  
-        
-        <Routes>
-            <Route path="newjournal" element={<CreateJournalView />} />
-        </Routes>
-        {showJournals
-            ? <Journals {...props} />
-            : <button onClick={()=>setShowJournals(!showJournals)}>View All Journals</button>
-        }
-        
-    </div>
+    return (
+        <Journals {...props} />
+    )
 }
