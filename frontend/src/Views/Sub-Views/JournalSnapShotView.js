@@ -12,9 +12,7 @@ export default function JournalSnapShotView(props){
     return (
         <div className="journalSnapShotView"> 
                 <h3>Recent Journals :</h3>
-                <ol>
                     {journalSnapShots}
-                </ol>
         </div>
     )
 }

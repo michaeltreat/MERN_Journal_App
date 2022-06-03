@@ -6,7 +6,8 @@ export default function JournalSnapShot(props){
 
 
     return (
-        <li className='journalSnapShot' key={journal._id}>
+        <div className='journalSnapShot'>
+
             <Link  to={`/journals/${journal._id}`}>
                 <div>
                     <h3>{journal.title} :</h3>
@@ -14,6 +15,7 @@ export default function JournalSnapShot(props){
                     <p>{journal.description}</p>
                 </div>
             </Link>
-        </li>
+        </div>
+
     )
 }

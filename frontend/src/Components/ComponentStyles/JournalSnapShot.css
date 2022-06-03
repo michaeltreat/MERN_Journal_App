@@ -16,10 +16,6 @@
     color:black
 }
 
-.journalSnapShot div:hover {
-    font-size: 150%;
-}
-
 .journalSnapShot > a > div {
     background-color: white;
     height:max-content;
