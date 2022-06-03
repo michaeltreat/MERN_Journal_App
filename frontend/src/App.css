@@ -6,8 +6,23 @@
     font-family: 'Dosis';
     background-color: antiquewhite;
     border-radius: 5px;
+
 }
 
+html, body {
+
+    margin: 1px;
+    
+
+}
+
+nav {
+    background-color: white;
+}
+
+nav > * {
+    background-color: white;
+}
 
 input{
     background-color: white;

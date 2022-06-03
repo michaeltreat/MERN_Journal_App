@@ -1,13 +1,18 @@
 nav {
+    background-color: white;
     text-align: center;
     border-bottom: 2px dashed pink;
 }
 
 nav > header > h1 {
+    background-color: white;
+    margin-top: 0px;
     margin-bottom: 0px;
+    padding-top: 10px;
 }
 
 nav > a > p {
+    background-color: white;
     border-bottom: 2px dashed pink;
     border-radius: 0;
     margin-left: 5%;

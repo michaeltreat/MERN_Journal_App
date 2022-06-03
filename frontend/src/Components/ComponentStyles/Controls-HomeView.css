@@ -1,0 +1,31 @@
+.controls-homeview {
+    background-color: white;
+    display:block;
+    text-align: center;
+    width: 375px;
+    height: 125px;    
+    border: 2px solid rgba(250, 168, 114, 0.404);
+    margin: auto;
+}
+
+.controls-homeview > div {
+    background-color: white;
+    margin-top: 0%;
+}
+.controls-homeview > h4{
+    background-color: white;
+}
+
+
+.controls-homeview > div >  a {
+    display: inline-block;
+    border: 2px solid rgb(250, 232, 215);
+    width:fit-content;
+    padding: 2.5%;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: antiquewhite;
+    text-decoration: none;
+    text-align: center;
+}
+

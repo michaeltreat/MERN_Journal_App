@@ -1,19 +1,17 @@
-.controls{
-    text-align: center;
-    
-}
 .controls > div {
-    margin-left: 5%;
-    margin-right:5%;
-    display: inline-block;
+    margin-top: 0%;
 }
 
-div > a {
+
+.controls > div >  a {
     display: inline-block;
     border: 1px solid black;
     width:fit-content;
-    padding: .75%;
+    padding: 4.5%;
+    margin-left: 10px;
+    margin-right: 10px;
     background-color: white;
+    border-color: Salmon;
     text-decoration: none;
     text-align: center;
 }

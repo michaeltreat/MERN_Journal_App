@@ -6,13 +6,13 @@ import Header from './Header';
 
 function Controls(){
     return (
-        <div className='controls'>
-            <div>
-                <Link to="/journals/new">Create New Journal</Link> 
-            </div>
-            <div>
-                <Link to="/journals/1">testing :id link for journal1</Link> 
-            </div>
+        <div className='controls-homeview'>
+                <h4>Controls</h4>
+                <div>
+
+                    <Link to="/journals/new">Create New Journal</Link> 
+                    <Link to="/journals/1">testing :id link for journal1</Link> 
+                </div>
         </div>
     )
 }
@@ -20,6 +20,7 @@ function Controls(){
 
 export default function Journals (props){
     const journals = props.journals
+    const user = "Miles"
 
     const journalElements = journals.map( (journal ) =>{
         return (
@@ -31,7 +32,10 @@ export default function Journals (props){
 
     return (
         <div>
-            <Header title={`Journals`} />
+           <div className='homeView'>
+                <Header title="Journals" />
+                <h3>{user}'s Journals</h3>
+            </div>
             <Controls/>
 
             <div>

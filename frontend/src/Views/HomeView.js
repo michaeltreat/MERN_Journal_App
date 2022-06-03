@@ -1,5 +1,5 @@
 import '../Components/ComponentStyles/HomeView.css'
-import '../Components/ComponentStyles/Controls.css'
+import '../Components/ComponentStyles/Controls-HomeView.css'
 
 
 import React, { useState} from 'react';
@@ -19,13 +19,11 @@ import JournalEntrySnapShot from '../Components/JournalEntrySnapShots';
 
 function Controls(){
     return (
-        <div className='controls'>
+        <div className='controls-homeview'>
+            <h4>Controls</h4>
             <div>
-            <Link to="/journals/">View All Journals</Link>  
-            </div>
-
-            <div>
-            <Link to="/journals/new">Create New Journal</Link> 
+                <Link to="/journals/">View All Journals</Link>  
+                <Link to="/journals/new">Create New Journal</Link> 
             </div>
         </div>
     )
@@ -37,7 +35,7 @@ export default function JournalsView(props){
 
     return (
         <div>
-            <div>
+            <div className='homeView'>
                 <Header title="Home" />
                 <h3>Welcome {user}!</h3>
             </div>

@@ -210,7 +210,7 @@ const dummyJournals =  [
 
 export default function App() {
   return (
-    <div>
+    <div >
         <NavBar />
         <Routes>
             <Route path="/" element={<LandingView />}/>
