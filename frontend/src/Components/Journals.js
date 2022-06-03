@@ -1,8 +1,7 @@
 
-import {Routes, Route, Link } from 'react-router-dom';
+import {Routes, Route, Link, Outlet } from 'react-router-dom';
 import Journal from "./Journal"
 import Header from './Header';
-
 
 function Controls(){
     return (
@@ -24,14 +23,20 @@ export default function Journals (props){
 
     const journalElements = journals.map( (journal ) =>{
         return (
-        <li key={journal._id}>
-            <Journal journal={journal}></Journal> 
-        </li>
+
+        <Link 
+            to={`/journals/${journal._id}`}
+            key={journal._id}
+        >
+            <h3>{journal.title}</h3>
+        </Link>
+ 
         )
     })
 
     return (
         <div>
+            {/* <Route path=":id" element={<Journal journal={}/> } /> */}
            <div className='homeView'>
                 <Header title="Journals" />
                 <h3>{user}'s Journals</h3>
@@ -39,9 +44,8 @@ export default function Journals (props){
             <Controls/>
 
             <div>
-                <ul>
-                    {journalElements}
-                </ul>
+                {journalElements}
+
             </div>
         </div>
     )

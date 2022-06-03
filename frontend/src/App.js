@@ -10,6 +10,7 @@ import NewJournalForm from './Components/Forms/NewJournalForm';
 
 import './App.css'
 import JournalEntry from "./Components/JournalEntry";
+import { getJournals } from "./data/data";
 // import MenuFlyOut from "./Views/MenuFlyout";
 
 // sample journal data model. This will be received by the server after user login
@@ -209,6 +210,8 @@ const dummyJournals =  [
     }
 ] 
 
+const testJournals = getJournals()
+
 export default function App() {
   return (
     <div >
@@ -216,8 +219,8 @@ export default function App() {
         <NavBar />
         <Routes>
             <Route path="/" element={<LandingView />}/>
-            <Route path="home/" element={<HomeView journals={dummyJournals} />}/>
-            <Route path="journals/*" element={<JournalsView journals={dummyJournals}/>} />
+            <Route path="home/" element={<HomeView journals={testJournals} />}/>
+            <Route path="journals/*" element={<JournalsView />} />
         </Routes>
 
   </div>

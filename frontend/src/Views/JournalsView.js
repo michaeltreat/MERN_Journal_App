@@ -7,17 +7,18 @@ import JournalEntry from '../Components/JournalEntry';
 
 
 import Journals from "../Components/Journals";
+import { getJournals} from '../data/data';
 
 
 export default function JournalsView(props){
-    const journals = props.journals
+    const journals = getJournals()
 
     return (
 
             <Routes>
-                <Route path='/' element={<Journals {...props}/>} />
+                <Route path='/' element={<Journals journals={journals}/>} />
                 <Route path="new" element={<NewJournalForm />} />
-                <Route path=":id" element={<Journal journal={journals[0]}/> } />
+                <Route path=":_id" element={<Journal /> } />
                 
                 {/* These routes need to be created still. */}
                 {/* <Route path=":id/entries" element={<Journal entries={props.entries} />} /> */}
