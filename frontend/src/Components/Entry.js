@@ -1,8 +1,10 @@
-import Header from './Layout/Header'
-import './ComponentStyles/JournalEntry.css'
 import { useParams } from "react-router-dom"
 import { getJournal } from '../data/data';
-import {Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+// Styles
+import './ComponentStyles/JournalEntry.css'
+
 
 function Controls(props){
     return (
@@ -11,7 +13,7 @@ function Controls(props){
             <div>
                 <Link to={`/journals/${props._id}/entries/new`}>New Entry</Link> 
                 <Link to={`/journals/${props._id}/`}>Back to Journal</Link>
-                {/* <Link to={`/journals/`}>Back to Journals</Link>   */}
+                <Link to={`/journals/`}>Back to Journals</Link>  
             </div>
         </div>
     )
@@ -24,11 +26,15 @@ export default function JournalEntry(props){
     const entry = props.entry || journal.entries.find( 
         (entry) => entry._id === params.id
     )
+    console.log(props)
 
     
     return (
         <div  >
-            {!props && <Controls _id={journal._id} />}
+            { (!props.journal) 
+                ? <Controls _id={journal._id} />
+                : null
+            }
 
             <h3>Description:</h3>
                 <p>{entry.description}</p>
