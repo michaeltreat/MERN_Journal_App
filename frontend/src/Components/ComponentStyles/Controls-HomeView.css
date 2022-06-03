@@ -29,3 +29,10 @@
     text-align: center;
 }
 
+.controls-homeview > div > a:visited {
+    color:black
+}
+
+.controls-homeview > div > a:hover {
+    font-size: 130%;
+}
