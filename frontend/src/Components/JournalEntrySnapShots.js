@@ -1,12 +1,12 @@
-// import './ComponentStyles/JournalSnapShot.css'
+import './ComponentStyles/JournalSnapShot.css'
 
 export default function JournalEntrySnapShot(props){
     const entry = props.entry;
-    console.log(entry)
+
 
     return (
 
-        <div  >
+        <div className='journalSnapShot' >
             
             <label>Description:</label>
             <p>

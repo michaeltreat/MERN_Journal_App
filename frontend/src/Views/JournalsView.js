@@ -9,21 +9,26 @@ import CreateJournalView from './Sub-Views/CreateJournalView';
 
 
 
+
+
 export default function JournalsView(props){
-    const [showForm, setShowForm] = useState()
     const [showJournals, setShowJournals] = useState(false)
 
+    const user = 'Miles'
     return <div>
     
         <Header header="- Journals" />
-        <p>Welcome Miles!</p>
+        <p>Welcome {user}!</p>
 
-        <CreateJournalView />
-        {/* <JournalSnapShotView {...props}/> */}
-        <Journals {...props} />
+        <Link to="newjournal">Create New Journal</Link>  
         
-        <button>View All Journals</button>
-
-
+        <Routes>
+            <Route path="newjournal" element={<CreateJournalView />} />
+        </Routes>
+        {showJournals
+            ? <Journals {...props} />
+            : <button onClick={()=>setShowJournals(!showJournals)}>View All Journals</button>
+        }
+        
     </div>
 }

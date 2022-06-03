@@ -7,11 +7,7 @@ export default function CreateJournalView(props){
 
     return (
         <div> 
-            {showForm
-                ? <NewJournalForm  />
-                : <button onClick={() => setShowForm(!showForm)}>Create New Journal</button>  
-            
-            }         
+            <NewJournalForm  />          
         </div>
     )
 

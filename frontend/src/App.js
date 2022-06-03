@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Outlet } from "react-router-dom";
 
 import HomeView from './Views/HomeView'
 import LandingView from './Views/LandingView';
@@ -214,7 +214,8 @@ export default function App() {
         <Routes>
             <Route path="/" element={<LandingView />}/>
             <Route path="home" element={<HomeView />}/>
-            <Route path="journals" element={<JournalsView journals={dummyJournals}/>}/>
+            <Route path="journals/*" element={<JournalsView journals={dummyJournals}/>}/>
+            <Route path="" element={<div></div>}/>
         </Routes>
 
   </div>
