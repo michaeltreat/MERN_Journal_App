@@ -2,6 +2,7 @@ import JournalEntrySnapShot from "../Components/EntrySnapShots";
 import Header from "../Components/Layout/Header";
 import JournalEntry from "../Components/Entry";
 import {Routes, Route, Link } from 'react-router-dom';
+import Entries from "../Components/Entries";
 
 function Controls(props){
 
@@ -23,25 +24,28 @@ export default function EntriesView(props){
 
     const journalEntrySnapShots = entries.map( (entry, i) =>{
         if ( i >= recentEntryDisplayLimit) return;
-        return <JournalEntrySnapShot key={entry._id} entry={entry} />
+
+        return (
+            <Link 
+                to={`/journals/${journal._id}/entries/${entry._id}`}
+                key={`entry-${entry._id}`}
+                >
+                <JournalEntrySnapShot key={entry._id} entry={entry} />
+
+            </Link>
+
+        ) 
     })
     
-    const journalEntires = entries.map(entry =>{
-        return <JournalEntry key={entry._id} entry={entry} title={journal.title} />
-    })
-
     return <div>
 
-        {/* <div>
-            <button> New Entry</button>  
-        </div> */}
         <Controls _id={journal._id}/>
-       
-        <p>Showing the {recentEntryDisplayLimit} most recent snapshots from "{journal.title}":</p>
-            {journalEntrySnapShots}
 
-        <p>Full Entries for {journal.title} </p>
-            {journalEntires}
+        <p>Showing the most recent snapshots from "{journal.title}":</p>
+            {journalEntrySnapShots}
+        
+       
+
 
 
     </div>
