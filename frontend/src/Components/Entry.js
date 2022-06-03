@@ -3,7 +3,7 @@ import { getJournal } from '../data/data';
 import { Link } from 'react-router-dom';
 
 // Styles
-import './ComponentStyles/JournalEntry.css'
+// import './ComponentStyles/JournalEntry.css'
 
 
 function Controls(props){
@@ -20,21 +20,20 @@ function Controls(props){
 }
 
 export default function JournalEntry(props){
+    let showControls = props.showControls
     const params = useParams()
     const journal = props.journal || getJournal(params._id);
 
     const entry = props.entry || journal.entries.find( 
         (entry) => entry._id === params.id
     )
-    console.log(props)
-
     
     return (
-        <div  >
-            { (!props.journal) 
+        <div >
+            {(showControls)
                 ? <Controls _id={journal._id} />
                 : null
-            }
+            }           
 
             <h3>Description:</h3>
                 <p>{entry.description}</p>

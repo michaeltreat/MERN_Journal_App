@@ -1,4 +1,10 @@
-.journalEntry > * {background-color: white;}
+.journalEntry > a * {
+    background-color: white;
+}
+
+.journalEntry > a:visited{
+    color:black;
+}
 
 .journalEntry {
     padding-left: 1.5em;
@@ -17,3 +23,5 @@
     margin-left: 1em;
     text-indent: 1em;
 }
+
+

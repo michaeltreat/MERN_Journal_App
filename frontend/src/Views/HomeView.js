@@ -31,17 +31,19 @@ function Controls(){
 
 
 export default function JournalsView(props){
-    const user = 'Miles'
+    const user = 'Miles M.'
 
     return (
         <div>
             <div className='homeView'>
-                <Header title="Home" />
-                <h3>Welcome {user}!</h3>
+                    <Header title={`Home - Welcome ${user}`} />
+
             </div>
+
             <Controls />
             
             <JournalSnapShotView journals={props.journals} />
+
             
         </div>
     )

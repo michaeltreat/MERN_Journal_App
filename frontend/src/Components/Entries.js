@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
 
 import Header from './Layout/Header';
 import Entry from './Entry';
 import { useParams } from "react-router-dom"
 import { getJournal } from '../data/data';
+import { Link } from 'react-router-dom';
+
+import "./ComponentStyles/JournalEntry.css"
 
 function Controls(props){
     return (
@@ -19,6 +21,7 @@ function Controls(props){
 }
 
 export default function Entries (props){
+    let showControls = props.showControls
     let params = useParams();
     const journal = props.journal || getJournal(params._id) 
    
@@ -26,9 +29,9 @@ export default function Entries (props){
 
     const journalEntires = entries.map(entry =>{
         return (
-            <li key={`entry-${entry._id}`}>
+            <li className='journalEntry' key={`entry-${entry._id}`}>
                 <Link to={`/journals/${journal._id}/entries/${entry._id}`}>
-                    <Entry key={entry._id} entry={entry} title={journal.title} />
+                    <Entry key={entry._id} entry={entry} journal={journal} showControls={showControls}/>
                 </Link >
 
             </li>
