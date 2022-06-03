@@ -10,7 +10,7 @@ import NewJournalForm from './Components/Forms/NewJournalForm';
 
 import './App.css'
 import JournalEntry from "./Components/JournalEntry";
-import MenuFlyOut from "./Views/MenuFlyout";
+// import MenuFlyOut from "./Views/MenuFlyout";
 
 // sample journal data model. This will be received by the server after user login
 const dummyJournals =  [
