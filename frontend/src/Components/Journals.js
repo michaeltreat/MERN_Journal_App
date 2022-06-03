@@ -1,4 +1,5 @@
 
+
 import {Routes, Route, Link, Outlet } from 'react-router-dom';
 import Journal from "./Journal"
 import Header from './Header';
@@ -16,6 +17,9 @@ function Controls(){
     )
 }
 
+// Displays :
+    // - Control box
+    // - List of Journal names
 
 export default function Journals (props){
     const journals = props.journals
@@ -24,28 +28,30 @@ export default function Journals (props){
     const journalElements = journals.map( (journal ) =>{
         return (
 
-        <Link 
+            <li key={journal._id}>
+            <Link 
             to={`/journals/${journal._id}`}
-            key={journal._id}
-        >
+            >
             <h3>{journal.title}</h3>
-        </Link>
+                </Link>
+            </li>
  
         )
     })
 
     return (
         <div>
-            {/* <Route path=":id" element={<Journal journal={}/> } /> */}
            <div className='homeView'>
                 <Header title="Journals" />
                 <h3>{user}'s Journals</h3>
             </div>
             <Controls/>
 
+        
             <div>
-                {journalElements}
-
+                    <ol>
+                        {journalElements}
+                    </ol>
             </div>
         </div>
     )

@@ -1,5 +1,7 @@
 
+import "../../Components/ComponentStyles/JournalSnapShotView.css"
 import JournalSnapShot from "../../Components/JournalSnapShot"
+
 
 export default function JournalSnapShotView(props){
 
@@ -8,11 +10,13 @@ export default function JournalSnapShotView(props){
     })
 
     return (
-        <div>
-            <h3>Snapshots of your most recent Journals:</h3>
-            <ol>
-                {journalSnapShots}
-            </ol>
+        <div className="journalSnapShotView">
+            <div>   
+                <h3>Snapshots of your most recent Journals:</h3>
+                <ol>
+                    {journalSnapShots}
+                </ol>
+            </div>
         </div>
     )
 }

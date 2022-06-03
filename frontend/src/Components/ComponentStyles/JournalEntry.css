@@ -3,24 +3,17 @@
 .journalEntry {
     padding-left: 1.5em;
     background-color: white;
-    width: 30em;
     border: 2px solid black;
     margin-bottom: 10px;
 }
 
-.journalEntry > label {
-    font-size: x-large;
-    border-bottom: 2px solid pink;
-    
-}
 
 .journalEntry > p {
     text-decoration: underline dashed pink;
     text-underline-offset: .25em;
     background-color: white;
-    font-size: large;
-    margin-bottom: 1.5em;
+    /* font-size: large; */
+    /* margin-bottom: 1.5em; */
     margin-left: 1em;
     text-indent: 1em;
-
 }

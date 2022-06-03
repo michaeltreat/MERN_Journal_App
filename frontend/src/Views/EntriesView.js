@@ -23,18 +23,12 @@ export default function EntriesView(props){
         </div>
 
        
-        {/* <p>Showing the {recentEntryDisplayLimit} most recent snapshots from "{props.title}":</p>
-        <ul>
+        <p>Showing the {recentEntryDisplayLimit} most recent snapshots from "{props.title}":</p>
             {journalEntrySnapShots}
-        </ul> */}
-        
 
-        {/* <div>
-            <h3>Full Entries for {props.title} </h3>
-            <ol>
-                {journalEntires}
-            </ol>
-        </div> */}
+        <p>Full Entries for {props.title} </p>
+            {journalEntires}
+
 
     </div>
 }

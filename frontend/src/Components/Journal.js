@@ -7,14 +7,14 @@ import EntriesView from "../Views/EntriesView"
 
 export default function Journal(props){
     let params = useParams();
-    const journal = getJournal(params._id) 
+    const journal = props.journal || getJournal(params._id) 
 
 
     return <div>
 
         <h3>{journal.title}</h3>
 
-        {/* <EntriesView entries={journal.entries} title={journal.title} recentEntryDisplayLimit={props.recentEntryDisplayLimit} /> */}
+        <EntriesView entries={journal.entries} title={journal.title} recentEntryDisplayLimit={props.recentEntryDisplayLimit} />
 
     </div>
 }

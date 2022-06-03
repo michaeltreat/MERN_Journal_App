@@ -7,7 +7,18 @@
     margin-bottom: 10px;
 }
 
-.journalSnapShot > p {
+.journalSnapShot > a {
+    background-color: white;
+    text-decoration: none;
+}
+
+.journalSnapShot > a > div {
+    background-color: white;
+    height:max-content;
+}
+
+.journalSnapShot > a > div > p {
+    background-color: white;
     text-decoration: underline dashed pink;
     text-underline-offset: .25em;
     background-color: white;
@@ -16,4 +27,14 @@
     margin-left: 1em;
     text-indent: 1em;
 
+}
+
+.journalSnapShot > a > div > p > b {
+    background-color: white;
+}
+
+
+.journalSnapShot > a > div > h3 {
+    background-color: white;
+    text-align: center;
 }

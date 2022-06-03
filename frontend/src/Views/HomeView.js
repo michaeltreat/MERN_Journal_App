@@ -40,6 +40,7 @@ export default function JournalsView(props){
                 <h3>Welcome {user}!</h3>
             </div>
             <Controls />
+            
             <JournalSnapShotView journals={props.journals} />
             
         </div>
