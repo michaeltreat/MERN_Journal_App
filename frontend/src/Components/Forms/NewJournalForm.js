@@ -12,7 +12,7 @@ const schema = yup.object({
 }).required();
 
 
-export default function NewJournalForm (){
+export default function NewJournalForm (props){
     const {register, handleSubmit, watch, formState: {errors} } = useForm({
         resolver: yupResolver(schema),
         shouldFocusError: true
