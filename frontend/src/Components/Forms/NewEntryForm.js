@@ -24,9 +24,9 @@ export default function NewEntryForm (props){
     }
     
         return <form className="journalForm" onSubmit={handleSubmit(onSubmit)}>
-            <p>New Journal Form</p>
+            <p>New Journal Entry</p>
             <input 
-                placeholder="Journal Title"
+                placeholder="Today I felt ...."
                 autoFocus
                 {...register("body")}
                 />

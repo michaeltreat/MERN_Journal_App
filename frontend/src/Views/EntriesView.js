@@ -16,7 +16,6 @@ function Controls(props){
     )
 }
 
-
 export default function EntriesView(props){
     const journal = props.journal
     const entries = journal.entries
