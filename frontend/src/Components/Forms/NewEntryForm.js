@@ -2,8 +2,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
+// Styles
 import '../ComponentStyles/FormStyles/NewJournalForm.css'
-
 
 export default function NewEntryForm (props){
 
@@ -12,8 +12,7 @@ export default function NewEntryForm (props){
         tags: yup.string(),
     }).required();
     
-    
-    const {register, handleSubmit, watch, formState: {errors} } = useForm({
+    const {register, handleSubmit, formState: {errors} } = useForm({
         resolver: yupResolver(schema),
         shouldFocusError: true
     });
@@ -40,7 +39,5 @@ export default function NewEntryForm (props){
             <p>{errors.tags?.message}</p>
             
             <input type="submit" value="Create Journal"  />
-        </form>
-    
-        
+        </form>    
     }

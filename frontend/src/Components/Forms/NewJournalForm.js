@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
+// Styles
 import '../ComponentStyles/FormStyles/NewJournalForm.css'
 
 const schema = yup.object({
@@ -11,9 +12,8 @@ const schema = yup.object({
    
 }).required();
 
-
 export default function NewJournalForm (props){
-    const {register, handleSubmit, watch, formState: {errors} } = useForm({
+    const {register, handleSubmit, formState: {errors} } = useForm({
         resolver: yupResolver(schema),
         shouldFocusError: true
     });
@@ -44,11 +44,8 @@ export default function NewJournalForm (props){
             {...register("tags")}
             />
 
-        {/* errors are rendered in p tags. I want to extract this into an error component */}
         <p>{errors.tags?.message}</p>
         
         <input type="submit" value="Create Journal"  />
-    </form>
-
-    
+    </form>    
 }

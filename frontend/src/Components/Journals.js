@@ -1,17 +1,13 @@
-
-
-import {Routes, Route, Link, Outlet } from 'react-router-dom';
-import Journal from "./Journal"
+import {Link } from 'react-router-dom';
 import Header from './Layout/Header';
 
 function Controls(){
     return (
         <div className='controls-homeview'>
-                <h4>Controls</h4>
-                <div>
-
-                    <Link to="/journals/new">Create New Journal</Link> 
-                </div>
+            <h4>Controls</h4>
+            <div>
+                <Link to="/journals/new">Create New Journal</Link> 
+            </div>
         </div>
     )
 }
@@ -30,9 +26,8 @@ export default function Journals (props){
                 <h3>{journal.title}</h3>
                 </Link>
             </li>
- 
         )
-    })
+    });
 
     return (
         <div>
@@ -49,6 +44,4 @@ export default function Journals (props){
             </div>
         </div>
     )
-
-
 }

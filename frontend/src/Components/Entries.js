@@ -1,7 +1,5 @@
+import { Link } from 'react-router-dom';
 
-
-import {Routes, Route, Link, Outlet } from 'react-router-dom';
-import Journal from "./Journal"
 import Header from './Layout/Header';
 import Entry from './Entry';
 import { useParams } from "react-router-dom"

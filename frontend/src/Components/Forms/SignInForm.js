@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
+
+// Styles
 import "../ComponentStyles/FormStyles/SignInForm.css"
 
 const schema = yup.object({
@@ -11,14 +13,16 @@ const schema = yup.object({
 }).required();
 
 export default function SignInForm(props){
-    const {register, handleSubmit, watch, formState: {errors} } = useForm({
+    const {register, handleSubmit, formState: {errors} } = useForm({
         resolver: yupResolver(schema),
         shouldFocusError: true
     });
 
     const onSubmit = data => {
-        console.log("hello");
+        console.log("hello from SignInForm.js");
+        console.dir(data)
     }
+
     return <form className="primary" onSubmit={handleSubmit(onSubmit)}>
             <p>Sign-in:</p>
 
@@ -41,7 +45,6 @@ export default function SignInForm(props){
                 placeholder="Email"
                 {...register("email")}
                 />
-
             
             <p>{errors.email?.message}</p>
             

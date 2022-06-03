@@ -24,12 +24,12 @@ export default function JournalEntry(props){
     const entry = props.entry || journal.entries.find( 
         (entry) => entry._id === params.id
     )
-    console.log(entry)
+
     
     return (
         <div  >
-            <Controls _id={journal._id} />
-            
+            {!props && <Controls _id={journal._id} />}
+
             <h3>Description:</h3>
                 <p>{entry.description}</p>
 

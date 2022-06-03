@@ -1,6 +1,8 @@
-import '../ComponentStyles/NavBar.css'
 import Header from './Header';
 import { Link } from "react-router-dom";
+
+//Styles
+import '../ComponentStyles/NavBar.css'
 
 export default function NavBar(props){
 
