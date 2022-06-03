@@ -1,42 +1,29 @@
 
 import React, { useState} from 'react';
-import {Routes, Route, Link } from 'react-router-dom'
+import {Routes, Route, Link } from 'react-router-dom';
 
-import JournalSnapShot from "../Components/JournalSnapShot";
 import Header from "../Components/Header";
-import NewJournalForm from "../Components/Forms/NewJournalForm";
-import Journal from "../Components/Journal";
+import Journals from '../Components/Journals';
 import JournalSnapShotView from './Sub-Views/JournalSnapShotView';
-
-
+import CreateJournalView from './Sub-Views/CreateJournalView';
 
 
 
 export default function JournalsView(props){
     const [showForm, setShowForm] = useState()
-
-  
+    const [showJournals, setShowJournals] = useState(false)
 
     return <div>
     
         <Header header="- Journals" />
-        <JournalSnapShotView journals={props.journals} />
+        <p>Welcome Miles!</p>
 
-
-        {/* Create Journal View */}
-        <div>          
-            <button onClick={() => setShowForm(!showForm)}>Create New Journal</button>  
-        </div>
-
-        <NewJournalForm  /> 
-      
-        {/* Full Journal View */}
-        {/* <div>
-        <Journal journal={props.journals[0]} recentEntryDisplayLimit={0} />
-        <Journal journal={props.journals[0]} recentEntryDisplayLimit={1} />
+        <CreateJournalView />
+        {/* <JournalSnapShotView {...props}/> */}
+        <Journals {...props} />
         
-        <Journal journal={props.journals[1]} recentEntryDisplayLimit={0} />
-        
-    </div> */}
+        <button>View All Journals</button>
+
+
     </div>
 }

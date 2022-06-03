@@ -1,10 +1,12 @@
-import './ComponentStyles/JournalSnapShot.css'
+// import './ComponentStyles/JournalSnapShot.css'
 
 export default function JournalEntrySnapShot(props){
     const entry = props.entry;
+    console.log(entry)
 
-    return <li >
-        <div className='journalEntry' >
+    return (
+
+        <div  >
             
             <label>Description:</label>
             <p>
@@ -17,5 +19,5 @@ export default function JournalEntrySnapShot(props){
             </p>
 
         </div>
-    </li>
+    )
 }
