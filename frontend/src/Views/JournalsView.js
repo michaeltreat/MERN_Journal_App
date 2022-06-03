@@ -3,7 +3,7 @@ import {Routes, Route, Link } from 'react-router-dom';
 import Journal from '../Components/Journal';
 import NewJournalForm from '../Components/Forms/NewJournalForm';
 import NewEntryForm from '../Components/Forms/NewEntryForm';
-import JournalEntry from '../Components/JournalEntry';
+import JournalEntry from '../Components/Entry';
 
 
 import Journals from "../Components/Journals";

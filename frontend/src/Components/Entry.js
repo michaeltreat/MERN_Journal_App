@@ -1,4 +1,4 @@
-import Header from './Header'
+import Header from './Layout/Header'
 import './ComponentStyles/JournalEntry.css'
 
 export default function JournalEntry(props){

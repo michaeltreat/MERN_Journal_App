@@ -1,10 +1,10 @@
-import JournalEntrySnapShot from "../Components/JournalEntrySnapShots";
-import Header from "../Components/Header";
-import JournalEntry from "../Components/JournalEntry";
+import JournalEntrySnapShot from "../Components/EntrySnapShots";
+import Header from "../Components/Layout/Header";
+import JournalEntry from "../Components/Entry";
 import {Routes, Route, Link } from 'react-router-dom';
 
 function Controls(props){
-    console.log(props._id)
+
     return (
         <div className='controls-homeview'>
             <h4>Controls</h4>

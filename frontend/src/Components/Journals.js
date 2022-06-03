@@ -2,7 +2,7 @@
 
 import {Routes, Route, Link, Outlet } from 'react-router-dom';
 import Journal from "./Journal"
-import Header from './Header';
+import Header from './Layout/Header';
 
 function Controls(){
     return (

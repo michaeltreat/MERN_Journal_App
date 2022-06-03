@@ -1,4 +1,4 @@
-import Header from "../Components/Header";
+import Header from "../Components/Layout/Header";
 import SignInForm from "../Components/Forms/SignInForm";
 
 export default function LandingView (props){

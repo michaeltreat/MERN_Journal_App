@@ -3,13 +3,13 @@ import { Routes, Route, Link, Outlet } from "react-router-dom";
 import HomeView from './Views/HomeView'
 import LandingView from './Views/LandingView';
 import JournalsView from './Views/JournalsView';
-import NavBar from "./Components/NavBar";
+import NavBar from "./Components/Layout/NavBar";
 import Journal from './Components/Journal';
 import NewJournalForm from './Components/Forms/NewJournalForm';
 
 
 import './App.css'
-import JournalEntry from "./Components/JournalEntry";
+import Entry from "./Components/Entry";
 import { getJournals } from "./data/data";
 // import MenuFlyOut from "./Views/MenuFlyout";
 

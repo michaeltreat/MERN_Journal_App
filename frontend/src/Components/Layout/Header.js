@@ -1,4 +1,4 @@
-import './ComponentStyles/Header.css'
+import '../ComponentStyles/Header.css'
 
 export default function Header(props){
     return <header>
