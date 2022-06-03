@@ -9,6 +9,7 @@ import NewJournalForm from './Components/Forms/NewJournalForm';
 
 
 import './App.css'
+import JournalEntry from "./Components/JournalEntry";
 
 // sample journal data model. This will be received by the server after user login
 const dummyJournals =  [
@@ -215,7 +216,11 @@ export default function App() {
             <Route path="/" element={<LandingView />}/>
             <Route path="home" element={<HomeView />}/>
             <Route path="journals/*" element={<JournalsView journals={dummyJournals}/>}/>
-            <Route path="" element={<div></div>}/>
+            <Route path="journals/new" element={<NewJournalForm />} />
+            <Route path="journals/:id" element={<Journal journal={props.journal}/> } />
+            <Route path="journals/:id/entries" element={<Journal entries={props.entries} />} />
+            <Route path="journals/:id/entries/new" element={<NewEntryForm journal={props.journal}/>} />
+            <Route path="journals/:id/entries/:id" element={<JournalEntry journal={props.journal}/>} />
         </Routes>
 
   </div>
