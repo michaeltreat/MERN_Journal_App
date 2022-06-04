@@ -221,6 +221,7 @@ export default function App() {
             <Route path="/" element={<LandingView />}/>
             <Route path="home/" element={<HomeView journals={testJournals} />}/>
             <Route path="journals/*" element={<JournalsView />} />
+            <Route path="*" element={<LandingView />} />
         </Routes>
 
   </div>
