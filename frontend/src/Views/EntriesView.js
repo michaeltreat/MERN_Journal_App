@@ -1,4 +1,4 @@
-import JournalEntrySnapShot from "../Components/EntrySnapShots";
+import EntrySnapShot from "../Components/EntrySnapShots";
 import { Link } from 'react-router-dom';
 
 // Styles 
@@ -30,7 +30,7 @@ export default function EntriesView(props){
                 <Link 
                     to={`/journals/${journal._id}/entries/${entry._id}`}
                     >
-                    <JournalEntrySnapShot key={entry._id} entry={entry} />
+                    <EntrySnapShot key={entry._id} entry={entry} />
 
                 </Link>
             </li>

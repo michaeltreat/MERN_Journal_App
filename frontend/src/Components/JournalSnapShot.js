@@ -10,7 +10,7 @@ export default function JournalSnapShot(props){
 
             <Link  to={`/journals/${journal._id}`}>
                 <div>
-                    <h3>{journal.title} :</h3>
+                    <h3>"{journal.title}"</h3>
                     <p><b>Description: </b></p>
                     <p>{journal.description}</p>
                 </div>

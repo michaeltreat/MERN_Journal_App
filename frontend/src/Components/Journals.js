@@ -1,6 +1,10 @@
 import {Link } from 'react-router-dom';
 import Header from './Layout/Header';
 
+// Styles 
+import "./ComponentStyles/Journals.css"
+import JournalSnapShot from './JournalSnapShot';
+
 function Controls(){
     return (
         <div className='controls-homeview'>
@@ -23,7 +27,8 @@ export default function Journals (props){
                 <Link 
                     to={`/journals/${journal._id}`}
                 >
-                <h3>{journal.title}</h3>
+                    <JournalSnapShot journal={journal} />
+
                 </Link>
             </li>
         )
@@ -37,7 +42,7 @@ export default function Journals (props){
 
             <Controls/>
 
-            <div>
+            <div className='journals'>
                 <ol>
                     {journalElements}
                 </ol>
