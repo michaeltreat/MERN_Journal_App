@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "https://michaeltreat.github.io/",
+  "homepage": "https://michaeltreat.github.io/MERN_Journal_App",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^2.8.10",
