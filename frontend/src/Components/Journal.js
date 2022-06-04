@@ -1,14 +1,20 @@
-import Header from "./Header"
+
+import { getJournal } from "../data/data";
+import { useParams } from "react-router-dom"
+
+import Header from "./Layout/Header"
 import EntriesView from "../Views/EntriesView"
 
 export default function Journal(props){
-    const journal = props.journal    
+    let params = useParams();
+    const journal = props.journal || getJournal(params._id) 
+
 
     return <div>
-        <Header header={`- Journal: '${journal.title}'`} />
-        <h3>{props.journal.title}</h3>
 
-        <EntriesView entries={journal.entries} title={journal.title} recentEntryDisplayLimit={props.recentEntryDisplayLimit}
-/>
+        <Header title={`"${journal.title}"`} />
+
+        <EntriesView journal={journal} recentEntryDisplayLimit={props.recentEntryDisplayLimit} />
+
     </div>
 }

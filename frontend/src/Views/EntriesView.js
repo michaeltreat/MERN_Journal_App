@@ -1,41 +1,55 @@
-import JournalEntrySnapShot from "../Components/JournalEntrySnapShots";
-import Header from "../Components/Header";
-import JournalEntry from "../Components/JournalEntry";
+import EntrySnapShot from "../Components/EntrySnapShots";
+import { Link } from 'react-router-dom';
 
+// Styles 
+import "../Components/ComponentStyles/JournalSnapShot.css"
+
+function Controls(props){
+
+    return (
+        <div className='controls-homeview'>
+            <h4>Controls</h4>
+            <div>
+                <Link to={`/journals/${props._id}/entries/new`}>New Entry</Link> 
+                <Link to={`/journals/${props._id}/entries`}>View Entires</Link>  
+            </div>
+        </div>
+    )
+}
 
 export default function EntriesView(props){
-    const entries = props.entries
+    const journal = props.journal
+    const entries = journal.entries
     const recentEntryDisplayLimit = props.recentEntryDisplayLimit || 4
 
     const journalEntrySnapShots = entries.map( (entry, i) =>{
         if ( i >= recentEntryDisplayLimit) return;
-        return <JournalEntrySnapShot key={entry._id} entry={entry} />
+
+        return (
+            <li className="journalSnapShot" key={`entry-${entry._id}`}>
+                <Link 
+                    to={`/journals/${journal._id}/entries/${entry._id}`}
+                    >
+                    <EntrySnapShot key={entry._id} entry={entry} />
+
+                </Link>
+            </li>
+
+        ) 
     })
     
-    const journalEntires = entries.map(entry =>{
-        return <JournalEntry key={entry._id} entry={entry} title={props.title} />
-    })
-
     return <div>
 
-        {/*Create new Entry  */}
-        <div>
-            <button> New Entry</button>  
-        </div>
+        <Controls _id={journal._id}/>
 
-        {/* Rendering snapshots of just the 4 most recent entries */}
-        <p>Showing the {recentEntryDisplayLimit} most recent snapshots from "{props.title}":</p>
-        <ul>
-            {journalEntrySnapShots}
-        </ul>
-        
-        {/* Full entries */}
-        <div>
-            <h3>Full Entries for {props.title} </h3>
+        <h3>Recent Entries: </h3>
             <ol>
-                {journalEntires}
+                {journalEntrySnapShots}
             </ol>
-        </div>
+        
+       
+
+
 
     </div>
 }

@@ -1,43 +1,31 @@
-import JournalSnapShot from "../Components/JournalSnapShot";
-import Header from "../Components/Header";
-import NewJournalForm from "../Components/Forms/NewJournalForm";
-import Journal from "../Components/Journal";
+import {Routes, Route, Link } from 'react-router-dom';
+
+import Journal from '../Components/Journal';
+import NewJournalForm from '../Components/Forms/NewJournalForm';
+import NewEntryForm from '../Components/Forms/NewEntryForm';
+import Entry from '../Components/Entry';
+import Entries from '../Components/Entries';
+
+
+import Journals from "../Components/Journals";
+import { getJournals} from '../data/data';
 
 
 export default function JournalsView(props){
+    const journals = getJournals()
 
-    const journalSnapShots = props.journals.map(journal =>{
-        return <JournalSnapShot key={journal._id} journal={journal} />
-    })
+    return (
 
-    return <div>
+            <Routes>
+                <Route path='/' element={<Journals journals={journals}/>} />
+                <Route path="new" element={<NewJournalForm />} />
+                <Route path=":_id" element={<Journal /> } />
+                
+                {/* These routes need to be created still. */}
+                <Route path=":_id/entries" element={<Entries showControls={false}/>} />
+                <Route path=":_id/entries/new" element={<NewEntryForm journal={props.journal}/>} />
+                <Route path=":_id/entries/:id" element={<Entry showControls={true}/>} />
+            </Routes>
 
-        <Header header="- Journals" />
-        
-        {/* Create Journal View */}
-        <div>
-            
-            <button>Create New Journal</button>  
-            <NewJournalForm />
-        </div>
-        
-
-        {/* Journal SnapShot View */}
-        <div>
-            <h3>Your Journals:</h3>
-            <ol>
-                {journalSnapShots}
-            </ol>
-        </div>
-
-        {/* Full Journal View */}
-        <div>
-            <Journal journal={props.journals[0]} recentEntryDisplayLimit={0} />
-            <Journal journal={props.journals[0]} recentEntryDisplayLimit={1} />
-            
-            <Journal journal={props.journals[1]} recentEntryDisplayLimit={0} />
-            
-        </div>
-
-    </div>
+    )
 }

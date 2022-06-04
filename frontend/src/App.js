@@ -1,11 +1,17 @@
+import { Routes, Route, Link, Outlet } from "react-router-dom";
+
 import HomeView from './Views/HomeView'
 import LandingView from './Views/LandingView';
 import JournalsView from './Views/JournalsView';
+import NavBar from "./Components/Layout/NavBar";
 import Journal from './Components/Journal';
 import NewJournalForm from './Components/Forms/NewJournalForm';
 
 
 import './App.css'
+import Entry from "./Components/Entry";
+import { getJournals } from "./data/data";
+// import MenuFlyOut from "./Views/MenuFlyout";
 
 // sample journal data model. This will be received by the server after user login
 const dummyJournals =  [
@@ -204,11 +210,19 @@ const dummyJournals =  [
     }
 ] 
 
+const testJournals = getJournals()
+
 export default function App() {
-  return <div>
-    <HomeView />
-    <LandingView />  
-    <JournalsView journals={dummyJournals}/>
+  return (
+    <div >
+        {/* <MenuFlyOut /> */}
+        <NavBar />
+        <Routes>
+            <Route path="/" element={<LandingView />}/>
+            <Route path="home/" element={<HomeView journals={testJournals} />}/>
+            <Route path="journals/*" element={<JournalsView />} />
+        </Routes>
 
   </div>
+  );
 }

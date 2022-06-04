@@ -1,0 +1,7 @@
+.journals > ol > li > a:visited {
+    color: black;
+} 
+
+.journals > ol > li > a {
+    text-decoration: none;
+} 
