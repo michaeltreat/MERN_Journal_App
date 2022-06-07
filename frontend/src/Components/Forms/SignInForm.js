@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import { v4 as uuidv4 } from "uuid"
 
 
 // Styles
@@ -18,9 +19,11 @@ export default function SignInForm(props){
         shouldFocusError: true
     });
 
+
+    
     const onSubmit = data => {
         console.log("hello from SignInForm.js");
-        console.dir(data)
+        console.dir()
     }
 
     return <form className="primary" onSubmit={handleSubmit(onSubmit)}>

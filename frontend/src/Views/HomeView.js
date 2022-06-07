@@ -2,20 +2,11 @@ import '../Components/ComponentStyles/HomeView.css'
 import '../Components/ComponentStyles/Controls-HomeView.css'
 
 
-import React, { useState} from 'react';
-import {Routes, Route, Link } from 'react-router-dom';
-
-import NewJournalForm from '../Components/Forms/NewJournalForm';
-import NewEntryForm from '../Components/Forms/NewEntryForm';
-import Journal from '../Components/Journal';
-import JournalEntry from '../Components/Entry';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Header from "../Components/Layout/Header";
-import Journals from '../Components/Journals';
 import JournalSnapShotView from './Sub-Views/JournalSnapShotView';
-import CreateJournalView from './Sub-Views/CreateJournalView';
-import JournalEntrySnapShot from '../Components/EntrySnapShots';
-
 
 function Controls(){
     return (
@@ -28,7 +19,6 @@ function Controls(){
         </div>
     )
 }
-
 
 export default function JournalsView(props){
     const user = 'Miles M.'
@@ -43,8 +33,6 @@ export default function JournalsView(props){
             <Controls />
             
             <JournalSnapShotView journals={props.journals} />
-
-            
         </div>
     )
 }

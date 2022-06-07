@@ -1,5 +1,6 @@
-import {Routes, Route, Link } from 'react-router-dom';
+import { useState } from 'react';
 
+import {Routes, Route } from 'react-router-dom';
 import Journal from '../Components/Journal';
 import NewJournalForm from '../Components/Forms/NewJournalForm';
 import NewEntryForm from '../Components/Forms/NewEntryForm';
@@ -12,14 +13,16 @@ import { getJournals} from '../data/data';
 
 
 export default function JournalsView(props){
-    const journals = getJournals()
+    const [journals, setJournals] = useState(getJournals)
+
+    console.log(journals) 
 
     return (
 
             <Routes>
-                <Route path='/' element={<Journals journals={journals}/>} />
-                <Route path="new" element={<NewJournalForm />} />
-                <Route path=":_id" element={<Journal /> } />
+                <Route path='/' element={<Journals setJournals={setJournals} journals={journals}/>} />
+                <Route path="new" element={<NewJournalForm journals={journals} setJournals={setJournals}/>} />
+                <Route path=":_id" element={<Journal journals={journals}/> } />
                 
                 {/* These routes need to be created still. */}
                 <Route path=":_id/entries" element={<Entries showControls={false}/>} />

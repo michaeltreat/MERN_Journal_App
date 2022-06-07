@@ -27,7 +27,7 @@ export default function Journals (props){
                 <Link 
                     to={`/journals/${journal._id}`}
                 >
-                    <JournalSnapShot journal={journal} />
+                    <JournalSnapShot setJournals={props.setJournals} journal={journal} />
 
                 </Link>
             </li>

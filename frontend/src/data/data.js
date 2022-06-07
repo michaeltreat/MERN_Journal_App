@@ -207,3 +207,4 @@ export function getJournal(_id){
     )
 
 }
+

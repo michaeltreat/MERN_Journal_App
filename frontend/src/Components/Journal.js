@@ -7,7 +7,11 @@ import EntriesView from "../Views/EntriesView"
 
 export default function Journal(props){
     let params = useParams();
-    const journal = props.journal || getJournal(params._id) 
+    const journals = props.journals
+    const journal = journals.find(journal => journal._id === params._id)
+    // const journal = props.journal || getJournal(params._id)
+    console.log(journal)
+
 
 
     return <div>
