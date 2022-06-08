@@ -13,14 +13,14 @@ import { getJournals} from '../data/data';
 
 
 export default function JournalsView(props){
-    const [journals, setJournals] = useState(getJournals)
+    
 
     return (
 
             <Routes>
-                <Route path='/' element={<Journals setJournals={setJournals} journals={journals}/>} />
-                <Route path="new" element={<NewJournalForm journals={journals} setJournals={setJournals}/>} />
-                <Route path=":_id" element={<Journal journals={journals}/> } />
+                <Route path='/' element={<Journals journals={props.journals} setJournals={props.setJournals}/>} />
+                <Route path="new" element={<NewJournalForm journals={props.journals} setJournals={props.setJournals}/>} />
+                <Route path=":_id" element={<Journal journals={props.journals}/> } />
                 
                 {/* These routes need to be created still. */}
                 <Route path=":_id/entries" element={<Entries showControls={false}/>} />

@@ -1,3 +1,5 @@
+
+import React, {useState} from "react";
 import { Routes, Route } from "react-router-dom";
 
 // components
@@ -211,13 +213,18 @@ const dummyJournals =  [
 const testJournals = getJournals()
 
 export default function App() {
+    const [journals, setJournals] = useState(getJournals);
+    const [userData, setUserData] = useState({});
+
+
+
   return (
     <div >
         <NavBar />
         <Routes>
             <Route path="/" element={<LandingView />}/>
-            <Route path="home/" element={<HomeView journals={testJournals} />}/>
-            <Route path="journals/*" element={<JournalsView />} />
+            <Route path="home/" element={<HomeView journals={journals} />}/>
+            <Route path="journals/*" element={<JournalsView setJournals={setJournals} journals={journals}/>} />
             <Route path="*" element={<LandingView />} />
         </Routes>
 
