@@ -1,0 +1,26 @@
+.center{
+    width: 50%;
+    text-align: center;
+    margin:auto;
+}
+.center > div > a {
+    text-decoration: none;
+}
+
+.center > div > a:visited, a::before {
+    text-decoration: none;
+    color: black;
+}
+
+.center > div >  div > a:visited, a::before {
+    text-decoration: none;
+    color: black;
+}
+
+.center > div > div > a {
+    text-decoration: none;
+}
+
+.center >h1 {
+    color:rgb(239, 5, 126);
+}

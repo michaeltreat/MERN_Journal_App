@@ -1,14 +1,9 @@
-
-// Styles
-import './ComponentStyles/JournalSnapShot.css'
-
-export default function JournalEntrySnapShot(props){
+export default function EntrySnapShot(props){
     const entry = props.entry;
 
     return (
 
-        <div >
-            
+        <div className="journalSnapShot">
             <h3>Description:</h3>
             <p>
                 {entry.description}

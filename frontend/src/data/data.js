@@ -194,6 +194,19 @@ let journals = [
         }
 ] 
 
+let user = {
+    "_id": 0,
+    "username" : "u0", 
+    "name" : {
+        "first" : "first",
+        "last" : "last"
+    },
+    "email" : "email-0@email.com",
+    "journal_ids" : [
+        "_0", "_01"
+    ]
+}
+
 export function getJournals(){
 
     return journals
@@ -207,3 +220,4 @@ export function getJournal(_id){
     )
 
 }
+

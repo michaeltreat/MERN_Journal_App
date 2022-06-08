@@ -1,13 +1,17 @@
 import {Link } from 'react-router-dom';
+
+// Components
 import Header from './Layout/Header';
+import JournalSnapShotView from '../Views/Sub-Views/JournalSnapShotView';
 
 // Styles 
 import "./ComponentStyles/Journals.css"
-import JournalSnapShot from './JournalSnapShot';
+
+// TODO: Fix styling for Journals SnapShots
 
 function Controls(){
     return (
-        <div className='controls-homeview'>
+        <div className='controls'>
             <h4>Controls</h4>
             <div>
                 <Link to="/journals/new">Create New Journal</Link> 
@@ -16,37 +20,14 @@ function Controls(){
     )
 }
 
-
 export default function Journals (props){
-    const journals = props.journals
-    const user = "Miles"
-
-    const journalElements = journals.map( (journal ) =>{
-        return (
-            <li key={journal._id}>
-                <Link 
-                    to={`/journals/${journal._id}`}
-                >
-                    <JournalSnapShot journal={journal} />
-
-                </Link>
-            </li>
-        )
-    });
-
     return (
-        <div>
-           <div className='homeView'>
-                <Header title={`${user}'s Journals`}/>
-            </div>
-
+        <div className='center'>
+            <Header title={`Journals`}/>
+            
             <Controls/>
-
-            <div className='journals'>
-                <ol>
-                    {journalElements}
-                </ol>
-            </div>
+            <h3>Your Journals: </h3>
+            <JournalSnapShotView journals={props.journals} />
         </div>
     )
 }

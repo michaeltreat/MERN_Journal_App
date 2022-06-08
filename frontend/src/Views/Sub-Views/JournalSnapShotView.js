@@ -1,24 +1,24 @@
+import { Link } from "react-router-dom"
 
 import "../../Components/ComponentStyles/JournalSnapShotView.css"
-import JournalSnapShot from "../../Components/JournalSnapShot"
 
+// Components
+import JournalSnapShot from "../../Components/SnapShots/JournalSnapShot"
 
 export default function JournalSnapShotView(props){
 
     const journalSnapShots = props.journals.map(journal =>{
         return (
-            <li key={journal._id}>
-                <JournalSnapShot journal={journal}/>
-            </li>
+            <Link key={journal._id} to={`/journals/${journal._id}`} >
+                <JournalSnapShot journal={journal} />
+            </Link>
+
         )
     })
 
     return (
-        <div className="journalSnapShotView"> 
-            <h3>Recent Journals :</h3>
-            <ol>
-                {journalSnapShots}
-            </ol>
+        <div>
+            {journalSnapShots}
         </div>
     )
 }

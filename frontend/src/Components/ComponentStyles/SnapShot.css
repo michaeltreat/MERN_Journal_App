@@ -1,0 +1,24 @@
+.journalSnapShot > div {
+    background-color: white;
+}
+
+.journalSnapShot > h3,p,b {
+    background-color:  white;
+    
+}
+
+.journalSnapShot > h3 {
+    color:rgb(239, 5, 126)
+}
+
+.journalSnapShot > p {
+    font-size: large;
+}
+
+.journalSnapShot {
+    background-color: white;
+    min-width: 20em;
+    border: 2px solid rgba(250, 168, 114, 0.404);
+    margin-bottom: 10px;
+    text-indent: 2%;
+}

@@ -1,25 +1,16 @@
-import '../Components/ComponentStyles/HomeView.css'
-import '../Components/ComponentStyles/Controls-HomeView.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-
-import React, { useState} from 'react';
-import {Routes, Route, Link } from 'react-router-dom';
-
-import NewJournalForm from '../Components/Forms/NewJournalForm';
-import NewEntryForm from '../Components/Forms/NewEntryForm';
-import Journal from '../Components/Journal';
-import JournalEntry from '../Components/Entry';
-
+// Components
 import Header from "../Components/Layout/Header";
-import Journals from '../Components/Journals';
 import JournalSnapShotView from './Sub-Views/JournalSnapShotView';
-import CreateJournalView from './Sub-Views/CreateJournalView';
-import JournalEntrySnapShot from '../Components/EntrySnapShots';
 
+// Styles
+import '../Components/ComponentStyles/Controls.css'
 
 function Controls(){
     return (
-        <div className='controls-homeview'>
+        <div className='controls'>
             <h4>Controls</h4>
             <div>
                 <Link to="/journals/">View All Journals</Link>  
@@ -29,22 +20,15 @@ function Controls(){
     )
 }
 
-
 export default function JournalsView(props){
-    const user = 'Miles M.'
-
+    
     return (
-        <div>
-            <div className='homeView'>
-                    <Header title={`Home - Welcome ${user}`} />
-
-            </div>
-
+        <div className='center'>
+            <Header title={`Home`} />
             <Controls />
-            
-            <JournalSnapShotView journals={props.journals} />
 
-            
+            <h3>Recent Journals:</h3>
+            <JournalSnapShotView journals={props.journals} />
         </div>
     )
 }

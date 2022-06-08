@@ -1,0 +1,39 @@
+.controls {
+    background-color: white;
+    display:block;
+    text-align: center;
+    width: 100%;
+    min-width: 20em;
+    height: 125px;
+    border: 2px solid rgba(239, 5, 126, 0.237);    
+    margin: auto;
+}
+
+.controls > div {
+background-color: white;
+    margin-top: 0%;
+}
+.controls > h4 {
+    background-color: white;
+    color: rgb(5, 169, 239);
+    font-size: large;
+}
+
+
+.controls > div >  a {
+    display: inline-block;
+    border: 2px solid rgba(239, 5, 126, 0.237); 
+    width:fit-content;
+    padding: 2.5%;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: antiquewhite;
+    text-decoration: none;
+    text-align: center;
+}
+
+.controls > div > div > a{
+    text-decoration: none;
+
+}
+
