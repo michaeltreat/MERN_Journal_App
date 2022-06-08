@@ -5,17 +5,17 @@ import { useParams } from "react-router-dom"
 import { getJournal } from '../data/data';
 import { Link } from 'react-router-dom';
 
-// import "./ComponentStyles/JournalEntry.css"
-import './ComponentStyles/JournalSnapShot.css'
+// Styles 
+import "../Components/ComponentStyles/Controls.css"
 
 function Controls(props){
     return (
-        <div className='controls-homeview'>
+        <div className='controls'>
             <h4>Controls</h4>
             <div>
                 <Link to={`/journals/${props._id}/entries/new`}>New Entry</Link> 
                 <Link to={`/journals/${props._id}/`}>Back to Journal</Link>
-                {/* <Link to={`/journals/`}>Back to Journals</Link>   */}
+
             </div>
         </div>
     )

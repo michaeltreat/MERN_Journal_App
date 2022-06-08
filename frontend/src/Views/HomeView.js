@@ -1,12 +1,13 @@
-import '../Components/ComponentStyles/HomeView.css'
-import '../Components/ComponentStyles/Controls.css'
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Components
 import Header from "../Components/Layout/Header";
 import JournalSnapShotView from './Sub-Views/JournalSnapShotView';
+
+// Styles
+import '../Components/ComponentStyles/HomeView.css'
+import '../Components/ComponentStyles/Controls.css'
 
 function Controls(){
     return (
@@ -30,7 +31,8 @@ export default function JournalsView(props){
             </div>
 
             <Controls />
-            
+
+            <h3>Recent Journals:</h3>
             <JournalSnapShotView journals={props.journals} />
         </div>
     )

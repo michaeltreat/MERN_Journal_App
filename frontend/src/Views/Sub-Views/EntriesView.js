@@ -1,13 +1,13 @@
 import EntrySnapShot from "../../Components/SnapShots/EntrySnapShots";
 import { Link } from 'react-router-dom';
 
-// Styles 
-import "../../Components/ComponentStyles/JournalSnapShot.css"
+// Styles
+import "../../Components/ComponentStyles/Controls.css"
 
 function Controls(props){
 
     return (
-        <div className='controls-homeview'>
+        <div className='controls'>
             <h4>Controls</h4>
             <div>
                 <Link to={`/journals/${props._id}/entries/new`}>New Entry</Link> 

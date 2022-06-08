@@ -1,19 +1,19 @@
 
 import {Routes, Route } from 'react-router-dom';
 
-// Components 
-import Journal from '../Components/Journal';
+// Components :
+    //Journals
+import Journals from "../Components/Journals";
 import NewJournalForm from '../Components/Forms/NewJournalForm';
+import Journal from '../Components/Journal';
+
+    //Entries
+import Entries from '../Components/Entries';
 import NewEntryForm from '../Components/Forms/NewEntryForm';
 import Entry from '../Components/Entry';
-import Entries from '../Components/Entries';
-
-
-import Journals from "../Components/Journals";
 
 export default function JournalsView(props){
     
-
     return (
 
             <Routes>

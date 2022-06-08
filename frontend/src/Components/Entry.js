@@ -3,7 +3,7 @@ import { getJournal } from '../data/data';
 import { Link } from 'react-router-dom';
 
 // Styles
-import './ComponentStyles/JournalEntry.css'
+import './ComponentStyles/Entry.css'
 
 
 function Controls(props){

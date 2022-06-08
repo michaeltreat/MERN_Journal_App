@@ -30,7 +30,7 @@ export default function Journals (props){
             </div>
 
             <Controls/>
-
+            <h3>Your Journals: </h3>
             <JournalSnapShotView journals={props.journals} />
         </div>
     )
