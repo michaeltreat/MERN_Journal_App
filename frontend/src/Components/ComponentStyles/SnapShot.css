@@ -1,5 +1,6 @@
 .journalSnapShot > div {
     background-color: white;
+    text-align: center;
 }
 
 .journalSnapShot > h3,p,b {
@@ -18,7 +19,9 @@
 .journalSnapShot {
     background-color: white;
     min-width: 20em;
+    max-width: 30em;
     border: 2px solid rgba(250, 168, 114, 0.404);
-    margin-bottom: 10px;
     text-indent: 2%;
+    margin: auto;
+    margin-bottom: 1em;
 }
