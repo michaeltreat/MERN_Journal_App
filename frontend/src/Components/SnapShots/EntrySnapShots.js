@@ -1,6 +1,6 @@
 
 // Styles
-import './ComponentStyles/JournalSnapShot.css'
+import '../ComponentStyles/JournalSnapShot.css'
 
 export default function EntrySnapShot(props){
     const entry = props.entry;

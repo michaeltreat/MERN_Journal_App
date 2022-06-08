@@ -1,4 +1,4 @@
-import EntrySnapShot from "../../Components/EntrySnapShots";
+import EntrySnapShot from "../../Components/SnapShots/EntrySnapShots";
 import { Link } from 'react-router-dom';
 
 // Styles 

@@ -21,7 +21,7 @@ export default function JournalsView(props){
                 <Route path='/' element={<Journals journals={props.journals} setJournals={props.setJournals}/>} />
 
                 {/* The rest of these routes are specific to journals */}
-                <Route path="new" element={<NewJournalForm journals={props.journals} setJournals={props.setJournals}/>} />
+                <Route path="new" element={<NewJournalForm setJournals={props.setJournals}/>} />
                 <Route path=":_id" element={<Journal journals={props.journals}/> } />
                 <Route path=":_id/entries" element={<Entries showControls={false}/>} />
                 <Route path=":_id/entries/new" element={<NewEntryForm journal={props.journal}/>} />

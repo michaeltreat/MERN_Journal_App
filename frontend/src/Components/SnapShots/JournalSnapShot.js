@@ -1,4 +1,4 @@
-import './ComponentStyles/JournalSnapShot.css'
+import '../ComponentStyles/JournalSnapShot.css'
 
 
 export default function JournalSnapShot(props){
