@@ -27,7 +27,7 @@ export default function Entry(props){
     const entry = journal.entries.find(entry => entry._id === params.id)
 
     return (
-        <div>
+        <div className="center">
             {(showControls)
                 ? <Controls _id={journal._id} />
                 : null

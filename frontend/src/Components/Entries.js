@@ -25,9 +25,10 @@ export default function Entries (props){
     const journal = props.journals.find(journal => journal._id === params._id)
 
     return (
-        <div>
-            <Header title={`Entries for: "${journal.title}" `} />
+        <div className="center">
+            <Header title={`Journal: "${journal.title}" `} />
             <Controls _id={journal._id}/>
+            <h3>Entries:</h3>
             <EntrySnapShotView journal={journal} />
  
         </div>

@@ -10,20 +10,16 @@ export default function EntrySnapShotView (props) {
     const entrySnapShots = entries.map( (entry) =>{
         
         return (
-            <li className="journalSnapShot" key={`entry-${entry._id}`}>
-                {/* to Entry */}
-                <Link to={`/journals/${journal._id}/entries/${entry._id}`}>
-                    <EntrySnapShot entry={entry} />
-                </Link>
-            </li>
+            <Link key={`entry-${entry._id}`} to={`/journals/${journal._id}/entries/${entry._id}`}>
+                <EntrySnapShot entry={entry} />
+            </Link>
+
         ) 
     })
 
     return (
         <div>
-            <ol>
-                {entrySnapShots}
-            </ol>
+            {entrySnapShots}
         </div>
     )
 } 

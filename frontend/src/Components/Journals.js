@@ -21,10 +21,9 @@ function Controls(){
 }
 
 export default function Journals (props){
-    const user = props.userData.name
     return (
-        <div>
-            <Header title={`${user}'s Journals`}/>
+        <div className='center'>
+            <Header title={`Journals`}/>
             
             <Controls/>
             <h3>Your Journals: </h3>

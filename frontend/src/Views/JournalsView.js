@@ -18,7 +18,7 @@ export default function JournalsView(props){
 
             <Routes>
                 {/* This component is rendered at the '/' route. It is rendering <Journals> */}
-                <Route path='/' element={<Journals userData={props.userData} journals={props.journals} setJournals={props.setJournals}/>} />
+                <Route path='/' element={<Journals journals={props.journals} setJournals={props.setJournals}/>} />
 
                 {/* The rest of these routes are specific to journals */}
                 <Route path="new" element={<NewJournalForm setJournals={props.setJournals}/>} />

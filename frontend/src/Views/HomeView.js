@@ -21,11 +21,10 @@ function Controls(){
 }
 
 export default function JournalsView(props){
-    const user = props.userData.name
-
+    
     return (
-        <div>
-            <Header title={`Home - Welcome ${user}`} />
+        <div className='center'>
+            <Header title={`Home`} />
             <Controls />
 
             <h3>Recent Journals:</h3>

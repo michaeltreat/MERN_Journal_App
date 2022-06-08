@@ -3,7 +3,7 @@ export default function EntrySnapShot(props){
 
     return (
 
-        <div >
+        <div className="journalSnapShot">
             <h3>Description:</h3>
             <p>
                 {entry.description}

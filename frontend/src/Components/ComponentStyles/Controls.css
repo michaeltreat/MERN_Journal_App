@@ -2,9 +2,10 @@
     background-color: white;
     display:block;
     text-align: center;
-    width: 375px;
-    height: 125px;    
-    border: 2px solid rgba(250, 168, 114, 0.404);
+    width: 100%;
+    min-width: 20em;
+    height: 125px;
+    border: 2px solid rgba(239, 5, 126, 0.237);    
     margin: auto;
 }
 
@@ -12,14 +13,16 @@
 background-color: white;
     margin-top: 0%;
 }
-.controls > h4{
+.controls > h4 {
     background-color: white;
+    color: rgb(5, 169, 239);
+    font-size: large;
 }
 
 
 .controls > div >  a {
     display: inline-block;
-    border: 2px solid rgb(250, 232, 215);
+    border: 2px solid rgba(239, 5, 126, 0.237); 
     width:fit-content;
     padding: 2.5%;
     margin-left: 10px;
@@ -29,7 +32,8 @@ background-color: white;
     text-align: center;
 }
 
-.controls > div > a:visited {
-    color:black
+.controls > div > div > a{
+    text-decoration: none;
+
 }
 

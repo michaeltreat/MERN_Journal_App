@@ -3,7 +3,7 @@ nav {
     vertical-align: top;
     background-color: white;
     text-align: center;
-    border-bottom: 2px dashed pink;
+    border-bottom: 2px dashed rgb(239, 5, 126);
     width: 100%;
     padding-top: 0px;
     padding-right:0px ;
@@ -24,7 +24,8 @@ nav > header > h1 {
 nav > a > p {
     display: inline-block;
     background-color: white;
-    border-bottom: 2px dashed pink;
+    border-bottom: 2px dashed rgb(239, 5, 126);
+    font-size: x-large;
     border-radius: 0;
     margin-left: 5%;
     margin-right: 5%;

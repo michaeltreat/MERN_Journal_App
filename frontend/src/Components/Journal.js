@@ -14,7 +14,7 @@ export default function Journal(props){
     if (!journal) console.log('ERROR')
 
     return (
-        <div>
+        <div className="center">
             <Header title={`Journal: "${journal.title}"`} />
             <EntriesView journal={journal} />
         </div>
