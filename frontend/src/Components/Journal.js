@@ -15,8 +15,8 @@ export default function Journal(props){
 
     return (
         <div>
-            <Header title={`"${journal.title}"`} />
-            <EntriesView journal={journal} recentEntryDisplayLimit={props.recentEntryDisplayLimit} />
+            <Header title={`Journal: "${journal.title}"`} />
+            <EntriesView journal={journal} />
         </div>
     )
 }

@@ -1,9 +1,14 @@
-import EntrySnapShot from "../../Components/SnapShots/EntrySnapShots";
 import { Link } from 'react-router-dom';
+
+// Components
+import EntrySnapShot from "../../Components/SnapShots/EntrySnapShots";
+import EntrySnapShotView from './EntrySnapShotView';
 
 // Styles
 import "../../Components/ComponentStyles/Controls.css"
 
+
+// Need props in order to reference the journal/:_id part of the route.
 function Controls(props){
 
     return (
@@ -19,35 +24,14 @@ function Controls(props){
 
 export default function EntriesView(props){
     const journal = props.journal
-    const entries = journal.entries
-    const recentEntryDisplayLimit = props.recentEntryDisplayLimit || 4
 
-    //TODO: Fix when there are no entries on a journal yet
-    const journalEntrySnapShots = entries.map( (entry, i) =>{
-        if ( i >= recentEntryDisplayLimit) return;
+    return (
+        <div>
+            <Controls _id={journal._id}/>
+            
+            <h3>Recent Journal Entries: </h3>
+            <EntrySnapShotView journal={journal} />
 
-        return (
-            <li className="journalSnapShot" key={`entry-${entry._id}`}>
-                <Link to={`/journals/${journal._id}/entries/${entry._id}`}>
-                    <EntrySnapShot key={entry._id} entry={entry} />
-                </Link>
-            </li>
-
-        ) 
-    })
-    
-    return <div>
-
-        <Controls _id={journal._id}/>
-
-        <h3>Recent Entries: </h3>
-            <ol>
-                {journalEntrySnapShots}
-            </ol>
-        
-       
-
-
-
-    </div>
+        </div>
+    )
 }

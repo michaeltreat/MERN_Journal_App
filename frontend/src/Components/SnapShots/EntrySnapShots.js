@@ -1,11 +1,9 @@
-
 export default function EntrySnapShot(props){
     const entry = props.entry;
 
     return (
 
         <div >
-            
             <h3>Description:</h3>
             <p>
                 {entry.description}
