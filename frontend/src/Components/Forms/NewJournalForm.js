@@ -39,10 +39,8 @@ export default function NewJournalForm (props){
 
     const onSubmit = data => {
 
-        
         let newJournal = new UserJournal(data)
         
-       
         props.setJournals( arr => [...arr, newJournal])
         navigate(`/journals/${newJournal._id}`)
     }

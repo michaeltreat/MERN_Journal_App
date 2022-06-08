@@ -1,17 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 
+// components
 import HomeView from './Views/HomeView'
 import LandingView from './Views/LandingView';
 import JournalsView from './Views/JournalsView';
 import NavBar from "./Components/Layout/NavBar";
 
-
+//styles
 import './App.css'
 
+//db functions
 import { getJournals } from "./data/data";
-// import MenuFlyOut from "./Views/MenuFlyout";
 
-// sample journal data model. This will be received by the server after user login
 const dummyJournals =  [
   {
       "_id": "journal-01",
@@ -213,7 +213,6 @@ const testJournals = getJournals()
 export default function App() {
   return (
     <div >
-        {/* <MenuFlyOut /> */}
         <NavBar />
         <Routes>
             <Route path="/" element={<LandingView />}/>

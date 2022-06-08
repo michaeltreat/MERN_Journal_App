@@ -1,8 +1,8 @@
-import EntrySnapShot from "../Components/EntrySnapShots";
+import EntrySnapShot from "../../Components/EntrySnapShots";
 import { Link } from 'react-router-dom';
 
 // Styles 
-import "../Components/ComponentStyles/JournalSnapShot.css"
+import "../../Components/ComponentStyles/JournalSnapShot.css"
 
 function Controls(props){
 

@@ -3,7 +3,7 @@ import { getJournal } from "../data/data";
 import { useParams } from "react-router-dom"
 
 import Header from "./Layout/Header"
-import EntriesView from "../Views/EntriesView"
+import EntriesView from "../Views/Sub-Views/EntriesView"
 
 export default function Journal(props){
     let params = useParams();

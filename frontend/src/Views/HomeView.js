@@ -1,5 +1,5 @@
 import '../Components/ComponentStyles/HomeView.css'
-import '../Components/ComponentStyles/Controls-HomeView.css'
+import '../Components/ComponentStyles/Controls.css'
 
 
 import React from 'react';
@@ -10,7 +10,7 @@ import JournalSnapShotView from './Sub-Views/JournalSnapShotView';
 
 function Controls(){
     return (
-        <div className='controls-homeview'>
+        <div className='controls'>
             <h4>Controls</h4>
             <div>
                 <Link to="/journals/">View All Journals</Link>  
@@ -27,7 +27,6 @@ export default function JournalsView(props){
         <div>
             <div className='homeView'>
                     <Header title={`Home - Welcome ${user}`} />
-
             </div>
 
             <Controls />

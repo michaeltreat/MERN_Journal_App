@@ -15,8 +15,6 @@ import { getJournals} from '../data/data';
 export default function JournalsView(props){
     const [journals, setJournals] = useState(getJournals)
 
-    console.log(journals) 
-
     return (
 
             <Routes>

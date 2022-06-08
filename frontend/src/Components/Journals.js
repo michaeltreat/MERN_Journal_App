@@ -7,7 +7,7 @@ import JournalSnapShot from './JournalSnapShot';
 
 function Controls(){
     return (
-        <div className='controls-homeview'>
+        <div className='controls'>
             <h4>Controls</h4>
             <div>
                 <Link to="/journals/new">Create New Journal</Link> 

@@ -1,4 +1,4 @@
-.controls-homeview {
+.controls {
     background-color: white;
     display:block;
     text-align: center;
@@ -8,16 +8,16 @@
     margin: auto;
 }
 
-.controls-homeview > div {
-    background-color: white;
+.controls > div {
+background-color: white;
     margin-top: 0%;
 }
-.controls-homeview > h4{
+.controls > h4{
     background-color: white;
 }
 
 
-.controls-homeview > div >  a {
+.controls > div >  a {
     display: inline-block;
     border: 2px solid rgb(250, 232, 215);
     width:fit-content;
@@ -29,7 +29,7 @@
     text-align: center;
 }
 
-.controls-homeview > div > a:visited {
+.controls > div > a:visited {
     color:black
 }
 
