@@ -18,16 +18,14 @@ function Controls(props){
     )
 }
 
-export default function JournalEntry(props){
+export default function Entry(props){
     let showControls = props.showControls
-    
-    const params = useParams()
-    const journal = props.journal || getJournal(params._id);
 
-    const entry = props.entry || journal.entries.find( 
-        (entry) => entry._id === params.id
-    )
+    const params = useParams()
     
+    const journal = props.journals.find(journal => journal._id === params._id)   
+    const entry = journal.entries.find(entry => entry._id === params.id)
+
     return (
         <div>
             {(showControls)

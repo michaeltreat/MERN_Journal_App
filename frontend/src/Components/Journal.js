@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 
 // Components
 import Header from "./Layout/Header"
-import EntriesView from "../Views/Sub-Views/EntriesView"
+import EntriesView from "../Views/EntriesView"
 
 export default function Journal(props){
     let params = useParams();

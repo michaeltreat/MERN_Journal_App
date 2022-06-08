@@ -11,6 +11,7 @@ export default function EntrySnapShotView (props) {
         
         return (
             <li className="journalSnapShot" key={`entry-${entry._id}`}>
+                {/* to Entry */}
                 <Link to={`/journals/${journal._id}/entries/${entry._id}`}>
                     <EntrySnapShot entry={entry} />
                 </Link>

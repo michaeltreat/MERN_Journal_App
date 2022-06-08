@@ -1,12 +1,12 @@
-
-import Header from './Layout/Header';
-import Entry from './Entry';
 import { useParams } from "react-router-dom"
-import { getJournal } from '../data/data';
 import { Link } from 'react-router-dom';
+
+// Components
+import Header from './Layout/Header';
 
 // Styles 
 import "../Components/ComponentStyles/Controls.css"
+import EntrySnapShotView from "../Views/Sub-Views/EntrySnapShotView";
 
 function Controls(props){
     return (
@@ -15,40 +15,20 @@ function Controls(props){
             <div>
                 <Link to={`/journals/${props._id}/entries/new`}>New Entry</Link> 
                 <Link to={`/journals/${props._id}/`}>Back to Journal</Link>
-
             </div>
         </div>
     )
 }
 
 export default function Entries (props){
-    let showControls = props.showControls
     let params = useParams();
-    const journal = props.journal || getJournal(params._id) 
-   
-    const entries = journal.entries
-
-    const journalEntires = entries.map(entry =>{
-        return (
-            <li className='journalSnapShot' key={`entry-${entry._id}`}>
-                <Link to={`/journals/${journal._id}/entries/${entry._id}`}>
-                    <Entry key={entry._id} entry={entry} journal={journal} showControls={showControls}/>
-                </Link >
-
-            </li>
-        )
-    })
+    const journal = props.journals.find(journal => journal._id === params._id)
 
     return (
         <div>
-           <div className='homeView'>
-                <Header title={`${journal.title}'s Entires:`}/>
-            </div>
-
+            <Header title={`Entries for: "${journal.title}" `} />
             <Controls _id={journal._id}/>
-            <ol>
-                {journalEntires}
-            </ol>
+            <EntrySnapShotView journal={journal} />
  
         </div>
     )
