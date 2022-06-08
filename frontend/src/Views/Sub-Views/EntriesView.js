@@ -22,16 +22,14 @@ export default function EntriesView(props){
     const entries = journal.entries
     const recentEntryDisplayLimit = props.recentEntryDisplayLimit || 4
 
+    //TODO: Fix when there are no entries on a journal yet
     const journalEntrySnapShots = entries.map( (entry, i) =>{
         if ( i >= recentEntryDisplayLimit) return;
 
         return (
             <li className="journalSnapShot" key={`entry-${entry._id}`}>
-                <Link 
-                    to={`/journals/${journal._id}/entries/${entry._id}`}
-                    >
+                <Link to={`/journals/${journal._id}/entries/${entry._id}`}>
                     <EntrySnapShot key={entry._id} entry={entry} />
-
                 </Link>
             </li>
 

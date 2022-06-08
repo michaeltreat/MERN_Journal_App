@@ -10,15 +10,13 @@ export default function Journal(props){
     const journals = props.journals
     const journal = journals.find(journal => journal._id === params._id)
 
-    //TODO: fix error when routed to non-existant journal.
+    //TODO: fix error when routed to non-existant journal. IE: journal/wrong-_id
     if (!journal) console.log('ERROR')
 
     return (
         <div>
             <Header title={`"${journal.title}"`} />
-
             <EntriesView journal={journal} recentEntryDisplayLimit={props.recentEntryDisplayLimit} />
-
         </div>
     )
 }

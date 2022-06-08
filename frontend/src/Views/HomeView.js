@@ -6,7 +6,6 @@ import Header from "../Components/Layout/Header";
 import JournalSnapShotView from './Sub-Views/JournalSnapShotView';
 
 // Styles
-import '../Components/ComponentStyles/HomeView.css'
 import '../Components/ComponentStyles/Controls.css'
 
 function Controls(){
@@ -22,14 +21,11 @@ function Controls(){
 }
 
 export default function JournalsView(props){
-    const user = 'Miles M.'
+    const user = props.userData.name
 
     return (
         <div>
-            <div className='homeView'>
-                    <Header title={`Home - Welcome ${user}`} />
-            </div>
-
+            <Header title={`Home - Welcome ${user}`} />
             <Controls />
 
             <h3>Recent Journals:</h3>

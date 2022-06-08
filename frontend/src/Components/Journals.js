@@ -7,6 +7,8 @@ import JournalSnapShotView from '../Views/Sub-Views/JournalSnapShotView';
 // Styles 
 import "./ComponentStyles/Journals.css"
 
+// TODO: Fix styling for Journals SnapShots
+
 function Controls(){
     return (
         <div className='controls'>
@@ -18,17 +20,12 @@ function Controls(){
     )
 }
 
-
 export default function Journals (props){
-    const journals = props.journals
-
-
+    const user = props.userData.name
     return (
         <div>
-           <div className='homeView'>
-                <Header title={`Miles M.'s Journals`}/>
-            </div>
-
+            <Header title={`${user}'s Journals`}/>
+            
             <Controls/>
             <h3>Your Journals: </h3>
             <JournalSnapShotView journals={props.journals} />
