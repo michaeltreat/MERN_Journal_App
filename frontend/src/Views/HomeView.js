@@ -20,7 +20,7 @@ function Controls(){
     )
 }
 
-export default function JournalsView(props){
+export default function HomeView(props){
     
     return (
         <div className='center'>

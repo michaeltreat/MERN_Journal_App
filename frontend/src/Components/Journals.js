@@ -1,13 +1,14 @@
-import {Link } from 'react-router-dom';
+import {Routes, Route, Link } from 'react-router-dom';
 
 // Components
 import Header from './Layout/Header';
 import JournalSnapShotView from '../Views/Sub-Views/JournalSnapShotView';
 
+import Entry from './Entry';
+
 // Styles 
 import "./ComponentStyles/Journals.css"
-
-// TODO: Fix styling for Journals SnapShots
+import { Fragment } from 'react';
 
 function Controls(){
     return (
@@ -21,7 +22,9 @@ function Controls(){
 }
 
 export default function Journals (props){
+
     return (
+    
         <div className='center'>
             <Header title={`Journals`}/>
             

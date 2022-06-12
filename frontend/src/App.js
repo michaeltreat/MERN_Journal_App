@@ -26,7 +26,7 @@ export default function App() {
         <Routes>
             <Route path="/" element={<LandingView />}/>
             <Route path="home/" element={<HomeView userData={userData} journals={journals} />}/>
-            <Route path="journals/*" element={<JournalsView userData= {userData} setJournals={setJournals} journals={journals}/>} />
+            <Route path="journals/*" element={<JournalsView userData={userData} setJournals={setJournals} journals={journals}/>} />
             <Route path="*" element={<LandingView />} />
         </Routes>
   </div>
