@@ -6,7 +6,8 @@ import EntriesView from "../Views/EntriesView"
 
 export default function Journal(props){
     let params = useParams();
-    const journal = props.journal || null
+    const journal = props.journal 
+    
     if(props.journal){
         console.log(props.journal)
 
@@ -20,8 +21,8 @@ export default function Journal(props){
 
     return (
         <div className="center">
-            <Header title={`Journal: "${journal.title}"`} />
-            <EntriesView journal={journal} />
+            <Header title={`Journal: "${journal?.title}"`} />
+            { (!props.journal) ? null :  <EntriesView journal={journal} />}
         </div>
     )
 }

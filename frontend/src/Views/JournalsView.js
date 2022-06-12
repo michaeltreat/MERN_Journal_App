@@ -15,10 +15,26 @@ import Entry from '../Components/Entry';
 
 export default function JournalsView(props){
 
-    const [activeJournal, setActiveJournal] = useState(props.journals[0]); 
-    
-    
     const params = useParams();
+
+    function checkForParams(){
+        let initialJournal = props.journals[0]
+        if(params[Object.keys(params)[0]]){
+            console.log('inside of checkForParams')
+            console.log(params[Object.keys(params)[0]])
+
+            params._id = params[Object.keys(params)[0]]
+                              
+            initialJournal = props.journals.find(journal => journal._id === params._id)
+
+        }
+        console.log(initialJournal)
+        return initialJournal
+    }
+
+    const [activeJournal, setActiveJournal] = useState(checkForParams()); 
+    
+    
     
     useEffect(() => {
         
