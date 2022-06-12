@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet} from 'react-router-dom';
 
 // Components
 import Header from "../Components/Layout/Header";
@@ -28,6 +28,7 @@ export default function HomeView(props){
             <Controls />
 
             <h3>Recent Journals:</h3>
+            <Outlet/>
             <JournalSnapShotView journals={props.journals} />
         </div>
     )

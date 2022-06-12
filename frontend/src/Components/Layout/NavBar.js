@@ -12,7 +12,7 @@ export default function NavBar(props){
             <Header title="Journally App"/>    
             <Link to="home"><p>Home</p></Link>
             <Link to="journals"><p>Journals</p></Link>
-            <Link to="/"><p>Login</p></Link>
+            <Link to="login"><p>Login</p></Link>
         </nav>
     )
 }

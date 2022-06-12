@@ -8,7 +8,7 @@ import Entry from './Entry';
 
 // Styles 
 import "./ComponentStyles/Journals.css"
-import { Fragment } from 'react';
+
 
 function Controls(){
     return (
@@ -30,7 +30,7 @@ export default function Journals (props){
             
             <Controls/>
             <h3>Your Journals: </h3>
-            <JournalSnapShotView journals={props.journals} />
+            <JournalSnapShotView setActiveJournal={props.setActiveJournal} journals={props.journals} />
         </div>
     )
 }

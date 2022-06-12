@@ -7,9 +7,13 @@ import JournalSnapShot from "../../Components/SnapShots/JournalSnapShot"
 
 export default function JournalSnapShotView(props){
 
+    const onClick = (journal )=> {
+        props.setActiveJournal(journal)
+    }
+
     const journalSnapShots = props.journals.map(journal =>{
         return (
-            <Link key={journal._id} to={`/journals/${journal._id}`} >
+            <Link key={journal._id} to={`/journals/${journal._id}`} onClick={() => onClick(journal)} >
                 <JournalSnapShot journal={journal} />
             </Link>
 

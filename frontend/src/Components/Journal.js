@@ -6,9 +6,14 @@ import EntriesView from "../Views/EntriesView"
 
 export default function Journal(props){
     let params = useParams();
+    const journal = props.journal || null
+    if(props.journal){
+        console.log(props.journal)
 
+    }
+    
     const journals = props.journals
-    const journal = journals.find(journal => journal._id === params._id)
+    // const journal = journals.find(journal => journal._id === params._id)
 
     //TODO: fix error when routed to non-existant journal. IE: journal/wrong-_id
     if (!journal) console.log('ERROR')

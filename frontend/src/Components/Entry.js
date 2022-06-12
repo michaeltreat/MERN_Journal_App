@@ -22,6 +22,7 @@ export default function Entry(props){
     let showControls = props.showControls
 
     const params = useParams()
+    console.log(params)
     
     const journal = props.journals.find(journal => journal._id === params._id)   
     const entry = journal.entries.find(entry => entry._id === params.id)

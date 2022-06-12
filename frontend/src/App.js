@@ -13,6 +13,7 @@ import './App.css'
 
 //db functions
 import { getJournals } from "./data/data";
+import JournalSnapShotView from "./Views/Sub-Views/JournalSnapShotView";
 
 const testJournals = getJournals()
 
@@ -24,8 +25,8 @@ export default function App() {
     <div >
         <NavBar />
         <Routes>
-            <Route path="/" element={<LandingView />}/>
-            <Route path="home/" element={<HomeView userData={userData} journals={journals} />}/>
+            <Route path="login" element={<LandingView />}/>
+            <Route path="home" element={<HomeView userData={userData} journals={journals}/>}/>
             <Route path="journals/*" element={<JournalsView userData={userData} setJournals={setJournals} journals={journals}/>} />
             <Route path="*" element={<LandingView />} />
         </Routes>
