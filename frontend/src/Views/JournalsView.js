@@ -42,7 +42,7 @@ export default function JournalsView(props){
             console.log('inside of params')
             params._id = params[Object.keys(params)[0]]
             if(activeJournal?._id !== params._id){
-                    
+                console.log('inside no activeJournal')  
                 let journal = props.journals.find(journal => journal._id === params.id)
                 setActiveJournal(journal)
             }
