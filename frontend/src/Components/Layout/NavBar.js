@@ -1,18 +1,17 @@
-import Header from './Header';
-import { Link } from "react-router-dom";
+import Header from './Header'
+import { Link } from 'react-router-dom'
 
-//Styles
+// Styles
 import '../ComponentStyles/NavBar.css'
 
-export default function NavBar(props){
+export default function NavBar (props) {
+  return (
 
-    return (
-        
-        <nav>
-            <Header title="Journally App"/>    
-            <Link to="home"><p>Home</p></Link>
-            <Link to="journals"><p>Journals</p></Link>
-            <Link to="/"><p>Login</p></Link>
-        </nav>
-    )
+    <nav>
+      <Header title='Journally App' />
+      <Link to='home'><p>Home</p></Link>
+      <Link to='journals'><p>Journals</p></Link>
+      <Link to='/'><p>Login</p></Link>
+    </nav>
+  )
 }
