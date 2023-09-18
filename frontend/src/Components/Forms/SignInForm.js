@@ -4,6 +4,9 @@ import * as yup from "yup";
 import { v4 as uuidv4 } from "uuid"
 
 
+//bootstrap
+import Button from "react-bootstrap/Button";
+
 // Styles
 import "../ComponentStyles/FormStyles/SignInForm.css"
 
@@ -52,6 +55,6 @@ export default function SignInForm(props){
             
             <p>{errors.email?.message}</p>
             
-            <input type="submit" value="Login"  />
+            <Button type="submit">Login</Button>
         </form>
 }
